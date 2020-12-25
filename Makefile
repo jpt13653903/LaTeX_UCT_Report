@@ -3,7 +3,7 @@ Figures := $(Figures:%.svg=%.pdf)
 TexFiles = $(shell find . -iname "*.tex")
 #-------------------------------------------------------------------------------
 
-Output = Report.pdf
+Output += Article.pdf
 #-------------------------------------------------------------------------------
 
 .PHONY: all figures clean
