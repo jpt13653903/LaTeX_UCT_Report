@@ -1,0 +1,62 @@
+% Define some useful global switches...
+\newif\ifDraft
+\newif\ifNoFloat
+%-------------------------------------------------------------------------------
+
+% When "true", output in "draft" mode -- useful for proofing
+\Draftfalse
+
+% When "true", put listings, figures and tables where you put them, instead of floating:
+\NoFloattrue
+%-------------------------------------------------------------------------------
+
+\input{Preamble/Report}
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\begin{sloppypar}
+
+\input{FrontMatter/TitlePage.tex}
+\input{FrontMatter/TitlePage-Dissertation.tex}
+%-------------------------------------------------------------------------------
+
+% We're using separate files for each main section
+% Please see the subdirectories Body/.. for the files.
+
+\input{FrontMatter/Abstract}
+
+% Set Roman numbering and exclude from counting
+\pagenumbering{roman}
+\setcounter{secnumdepth}{0}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+% \listofequations
+\clearpage
+%-------------------------------------------------------------------------------
+
+% Set arabic, restart the counter, and set back to allow subsubsection
+\pagenumbering{arabic}
+\setcounter{secnumdepth}{3}
+\setcounter{page}{1}
+%-------------------------------------------------------------------------------
+
+\include{Body/Introduction}
+\include{Body/LiteratureReview}
+\include{Body/Methodology}
+\include{Body/Design}
+\include{Body/Experimentation}
+\include{Body/Results}
+\include{Body/Conclusion}
+%-------------------------------------------------------------------------------
+
+\bibliography{Bibliography/Bibliography}
+%-------------------------------------------------------------------------------
+
+\input{Body/Appendix}
+
+\end{sloppypar}
+\end{document}
+%-------------------------------------------------------------------------------

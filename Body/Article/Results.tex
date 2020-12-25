@@ -10,22 +10,22 @@ Include good quality graphs (see Fig.~\ref{fig:r_vs_N;_f=0_0005;_P=90}).  These 
 
 \begin{Matlab_float}{Octave function to format a figure and save it to a high quality PDF graph}{FormatFig}
 function FormatFig(X, Y, File);
- set(gcf, 'PaperUnits'      , 'inches');
- set(gcf, 'PaperOrientation', 'landscape');
- set(gcf, 'PaperSize'       ,       [8, 4]);
- set(gcf, 'PaperPosition'   , [0, 0, 8, 4]);
-
- set(gca, 'FontName', 'Times New Roman');
- set(gca, 'Position', [0.1 0.2 0.85 0.75]);
-
- xlabel(["\n" X]);
- ylabel([Y "\n\n"]);
-
- setenv("GSC", "GSC"); # Eliminates stupid warning
- print(...
-  [File '.pdf'],...
-  '-dpdf'...
- );
+  set(gcf, 'PaperUnits'      , 'inches');
+  set(gcf, 'PaperOrientation', 'landscape');
+  set(gcf, 'PaperSize'       ,       [8, 4]);
+  set(gcf, 'PaperPosition'   , [0, 0, 8, 4]);
+ 
+  set(gca, 'FontName', 'Times New Roman');
+  set(gca, 'Position', [0.1 0.2 0.85 0.75]);
+ 
+  xlabel(["\n" X]);
+  ylabel([Y "\n\n"]);
+ 
+  setenv("GSC", "GSC"); # Eliminates stupid warning
+  print(...
+    [File '.pdf'],...
+    '-dpdf'...
+  );
 end
 \end{Matlab_float}
 
@@ -36,7 +36,7 @@ end
   xlim([0 360]);                            # Limit the x range
   ylim([-1 1]);                             # Limit the y range
   set(gca, 'xtick', [0 90 180 270 360]);    # Set the x labels
-  
+
   FormatFig(...                             # Call the function with:
     'Phase shift [\circ]',...                      # The x title
     'Correlation coefficient',...                  # The y title

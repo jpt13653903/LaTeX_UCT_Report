@@ -4,6 +4,7 @@ TexFiles = $(shell find . -iname "*.tex")
 #-------------------------------------------------------------------------------
 
 Output += Article.pdf
+Output += Report.pdf
 #-------------------------------------------------------------------------------
 
 .PHONY: all figures clean
@@ -15,7 +16,7 @@ figures: $(Figures)
 
 clean:
 	rm -f $(Figures)
-	rm -f *.aux *.bbl *.blg *.log *.out *.pdf *.gz *.toc
+	rm -f *.aux *.bbl *.blg *.log *.out *.pdf *.gz *.toc *.lof *.lot
 #-------------------------------------------------------------------------------
 
 %.pdf: %.svg
@@ -23,11 +24,11 @@ clean:
 #-------------------------------------------------------------------------------
 
 %.pdf: $(TexFiles) $(Figures)
-	bibtex $*
+	- bibtex $*
+	- pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
+	- bibtex $*
 	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
-	bibtex $*
-	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
-	bibtex $*
+	- bibtex $*
 	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
 #-------------------------------------------------------------------------------
 

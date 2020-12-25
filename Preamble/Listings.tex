@@ -1,13 +1,21 @@
-\usepackage{textcomp} % Used in listings for printing upright quotes
-\usepackage{listings} % For typesetting source code
+\usepackage{textcomp} %Used in listings for printing upright quotes
+\usepackage{listings} %For typesetting source code
 \lstloadlanguages{C++, Matlab, Verilog}
 %-------------------------------------------------------------------------------
 
-\lstset{%
-  frame      = single,%
-  basicstyle = \tiny\ttfamily,%
-  basewidth  = 1.3ex%
-}
+\ifArticle
+  \lstset{%
+    frame      = single,%
+    basicstyle = \tiny\ttfamily,%
+    basewidth  = 1.3ex%
+  }
+\else
+  \lstset{%
+    frame      = single,%
+    basicstyle = \scriptsize\ttfamily,%
+    basewidth  = 1.2ex%
+  }
+\fi
 %-------------------------------------------------------------------------------
 
 \definecolor{keyword}{rgb}{0.5, 0.0, 0.0}
@@ -56,7 +64,7 @@
   \setlength{\CodeWidth}{0.95\columnwidth}%
   \noindent\centering\minipage{\CodeWidth}%
 }
-\newcommand{\EndListingInline}  {\endminipage\par}
+\newcommand{\EndListingInline}{\endminipage\par}
 %-------------------------------------------------------------------------------
 
 \newcommand{\SetupMatlab}{
