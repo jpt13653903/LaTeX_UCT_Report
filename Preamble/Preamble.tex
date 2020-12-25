@@ -5,11 +5,9 @@
 
 \usepackage{color}
 \usepackage{graphicx}
-\usepackage{caption}
 \usepackage{flafter}
 \usepackage{placeins}
 \usepackage{cite}
-\usepackage{float}
 %-------------------------------------------------------------------------------
 
 \newcommand{\micro}{\textmu}
@@ -25,22 +23,22 @@
 %-------------------------------------------------------------------------------
 
 \renewcommand{\today}{%
- \number\day\space%
- \ifcase\month%
-  \or January%
-  \or February%
-  \or March%
-  \or April%
-  \or May%
-  \or June%
-  \or July%
-  \or August%
-  \or September%
-  \or October%
-  \or November%
-  \or December%
- \fi%
- \space\number\year%
+  \number\day\space%
+  \ifcase\month%
+    \or January%
+    \or February%
+    \or March%
+    \or April%
+    \or May%
+    \or June%
+    \or July%
+    \or August%
+    \or September%
+    \or October%
+    \or November%
+    \or December%
+  \fi%
+  \space\number\year%
 }
 %-------------------------------------------------------------------------------
 

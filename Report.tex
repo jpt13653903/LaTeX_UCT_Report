@@ -1,17 +1,29 @@
+% Define some useful global switches...
+\newif\ifDraft
+\newif\ifNoFloat
+%-------------------------------------------------------------------------------
+
+% When "true", output in "draft" mode -- useful for proofing
+\Draftfalse
+
+% When "true", put figures and tables where you put them, instead of floating:
+\NoFloattrue
+%-------------------------------------------------------------------------------
+
 \input{Preamble/Preamble}
 
 \title{The Title of Your Report}
 
 \author{%
- \setcounter{author}{1}
- \IEEEauthorblockN{John G Deere\theauthor\ and Budy F. Jones\theauthor}
- \setcounter{author}{1}
- \IEEEauthorblockA{%
-  EEE4084F Class of 2017\\
-  University of Cape Town\\
-  South Africa\\
-  \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
- }
+  \setcounter{author}{1}
+  \IEEEauthorblockN{John G Deere\theauthor\ and Budy F. Jones\theauthor}
+  \setcounter{author}{1}
+  \IEEEauthorblockA{%
+    EEE4084F Class of 2017\\
+    University of Cape Town\\
+    South Africa\\
+    \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
+  }
 }
 
 \begin{document}

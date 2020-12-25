@@ -58,14 +58,10 @@ Tables are often a convenient means by which to specify lists of parameters.  An
 \subsection{Pictures and Screen-shots}
 When you include screen-shots, pdf\LaTeX{} supports JPG and PNG file formats.  PNG is preferred for screen-shots, as it is a loss-less format.  JPG is preferred for photos, as it results in a smaller file size.  It's generally a good idea to resize photos (not screen-shots) to be no more that 300~dpi, in order to reduce file size.  For 2-column article format papers, this translates to a maximum width of 1024.  \textbf{Never change the aspect ratio of screen-shots and pictures!}
 
-The source used to import a picture in an exact spot, with a caption and labels
+The source used to import a picture in an exact spot, with a caption and labels, is presented below.  Refer to it as Fig.~\ref{fig:UCT_Circular}.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\columnwidth]{Figures/UCT}
-\caption{An example image}
-\label{fig:imageExample}
-\end{figure}
+\Figure[width=0.6\columnwidth]{An example image}{UCT_Circular}
+\FloatBarrier
 
 \subsection{Maths}
 \LaTeX{} has a very sophisticated maths rendering engine, as illustrated by equation~\ref{eq:Example}.  When talking about approximate answers, never use $\pm{54}$~V, as this implies ``positive or negative 54~V''.  Use $\approx{54}$~V or $\sim{54}$~V instead.
