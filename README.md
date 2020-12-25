@@ -8,7 +8,7 @@ This template compiles using pdfLaTeX.  For the `make figures` target to also
 work, InkScape has to be installed and available on the system path.
 
 The Makefile works in Windows, but it assumes that you're running it from 
-within a bash-like terminal.  The easiest way to do this is use
+within a bash-like terminal.  The easiest way to do this is to use
 [Git Bash](https://git-scm.com).  You will also need to install
 [GNU Make](https://www.gnu.org/software/make/), which comes standard with 
 [TDM-GCC](https://jmeubank.github.io/tdm-gcc/).
