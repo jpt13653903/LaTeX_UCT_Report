@@ -25,8 +25,13 @@
 \definecolor{string2}{rgb}{0.5, 0.0, 0.5}
 %-------------------------------------------------------------------------------
 
-\newcounter{Listing}
-\renewcommand{\theListing}{\arabic{Listing}}
+\ifArticle
+  \newcounter{Listing}
+  \renewcommand{\theListing}{\arabic{Listing}}
+\else
+  \newcounter{Listing}[chapter]
+  \renewcommand{\theListing}{\arabic{chapter}.\arabic{Listing}}
+\fi
 
 \newlength{\CodeWidth}
 
@@ -38,7 +43,7 @@
     \figure[!t]
   \fi
   \refstepcounter{Listing}
-  \addcontentsline{lof}{section}{Listing \theListing{}~~~#1}
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Listing \theListing{}}~#1}
   \label{lst:#2}
   \def\ListingCaption{#1}
   \noindent\centering\minipage{\CodeWidth}%

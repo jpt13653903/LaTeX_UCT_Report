@@ -1,0 +1,30 @@
+\ifDraft%
+  \definecolor{CiteColour}{rgb}{0.5, 0, 0}%
+  \definecolor{LinkColour}{rgb}{0, 0.5, 0}%
+  \definecolor{UrlColour} {rgb}{0, 0, 0.7}%
+
+  \usepackage[pdftex                        ,%
+              bookmarks         = true      ,%
+              bookmarksnumbered = true      ,%
+              setpagesize       = false     ,%
+              colorlinks        = true      ,%
+              linkcolor         = LinkColour,%
+              urlcolor          = UrlColour ,%
+              citecolor         = CiteColour,%
+              pdfpagelayout     = OneColumn ,%
+              pdfstartview      = FitH]{hyperref}
+%-------------------------------------------------------------------------------
+
+\else%
+  \usepackage[pdftex                       ,%
+              bookmarks         = true     ,%
+              bookmarksnumbered = true     ,%
+              setpagesize       = false    ,%
+              colorlinks        = true     ,%
+              linkcolor         = black    ,%
+              urlcolor          = black    ,%
+              citecolor         = black    ,%
+              pdfpagelayout     = OneColumn,%
+              pdfstartview      = FitH]{hyperref}
+\fi
+%-------------------------------------------------------------------------------

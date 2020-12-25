@@ -1,14 +1,32 @@
 \newlength{\TempFigureLength}
 %-------------------------------------------------------------------------------
 
-\newenvironment{FigureEnvironment}{
+\newenvironment{FigureEnvironment}[1]{
+  \def\FigureCaption{#1}
   \ifNoFloat
     \begin{figure}[!htbp]%
   \else
     \begin{figure}[!t]%
   \fi
   \begin{center}%
+  \refstepcounter{figure}
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
 }{
+  \ifArticle
+    \ifFormal
+      \footnotesize
+    \else
+      \small
+    \fi
+  \else
+    \small
+  \fi
+  \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{\FigureCaption}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+    \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{\FigureCaption}}%
+  \else
+    Fig.~\thefigure{}.~~{\FigureCaption}%
+  \fi
   \end{center}%
   \end{figure}%
   \ifNoFloat
@@ -17,21 +35,15 @@
 }
 %-------------------------------------------------------------------------------
 
-\def\FigureSize{0.8}
+\def\FigureSize{1.2}
+\ifArticle\ifFormal
+  \def\FigureSize{0.8}
+\fi\fi
 
 \newcommand{\Figure}[3][scale=\FigureSize]{%
-  \begin{FigureEnvironment}%
-    \refstepcounter{figure}
-    \addcontentsline{lof}{section}{Fig.~\thefigure{}~~~#2}
+  \begin{FigureEnvironment}{#2}%
     \label{fig:#3}%
     \includegraphics[#1]{Figures/#3}\\[1em]%
-    \footnotesize
-    \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{#2}}
-    \ifdim \TempFigureLength > 0.95\columnwidth
-      \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{#2}}%
-    \else
-      Fig.~\thefigure{}.~~{#2}%
-    \fi
   \end{FigureEnvironment}%
 }
 %-------------------------------------------------------------------------------
@@ -52,13 +64,11 @@
 }
 %-------------------------------------------------------------------------------
 
-\renewcommand{\thetable}{\Roman{table}}
-
-\newcommand{\Table}[5]{%
+\newcommand{\Table}[4]{%
   \begin{TableEnvironment}%
     \refstepcounter{table}
     \addcontentsline{lot}{section}{TABLE \thetable{}~~~#1}
-    \label{tab:#5}%
+    \label{tab:#4}%
     TABLE \thetable{}\\[1ex]
     \settowidth{\TempFigureLength}{\textsc{#1}}
     \ifdim \TempFigureLength > 0.95\columnwidth
@@ -68,13 +78,7 @@
     \fi\\[1em]
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{#2}
-      \hline
-      \hline
-        #3\\
-      \hline
-        #4
-      \hline
-      \hline
+      #3
     \end{tabular}
   \end{TableEnvironment}%
 }

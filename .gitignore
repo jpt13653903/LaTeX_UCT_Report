@@ -8,6 +8,9 @@
 *.blg
 *.log
 *.out
+*.toc
+*.lof
+*.lot
 *.gz
 *.zip
 

@@ -1,61 +1,92 @@
-% Define some useful global switches...
-\newif\ifDraft
-\newif\ifNoFloat
+\input{Template/DefineFlags}
+\input{Template/Report}
 %-------------------------------------------------------------------------------
 
-% When "true", output in "draft" mode -- useful for proofing
-\Draftfalse
+% For the date, use full day month year for an informal report, but only
+% "month year" for a format thesis.  If nothing is provided, "\today" is used.
 
-% When "true", put listings, figures and tables where you put them, instead of floating:
-\NoFloattrue
-%-------------------------------------------------------------------------------
-
-\input{Preamble/Report}
+\ifFormal
+  \title        {Title of Dissertation}
+  \subtitle     {Subtitle}
+  \author       {Your Name}
+  \supervisor   {Your Supervisor(s)}
+  \department   {Electrical and Electronic Engineering}
+  \degree       {Bachelor of Science}
+  \field        {Electrical and Computer Engineering}
+  \keywords     {Some keywords relating to your research}
+  \date         {November 2020} % Month Year only (leave out for \today)
+\else
+  \subjectcode  {Subject Code}
+  \subjectname  {Subject Name}
+  \title        {Title of Paper}
+  \author       {Author 1  \\ Author 2  \\ Author N }
+  \studentnumber{ATHNUM001 \\ ATHNUM010 \\ ATHNUM011}
+  \date         {22 April 2018} % Full date (leave out for \today)
+\fi
 %-------------------------------------------------------------------------------
 
 \begin{document}
 \begin{sloppypar}
 
-\input{FrontMatter/TitlePage.tex}
-\input{FrontMatter/TitlePage-Dissertation.tex}
+\frontmatter
+\maketitle
 %-------------------------------------------------------------------------------
+
+\input{Template/Plagiarism}
+
+\setcounter{page}{0}
+\input{FrontMatter/Abstract}
+  
+{
+  \clearpage
+  \thispagestyle{empty}
+  
+  \renewcommand{\baselinestretch}{0}\normalsize
+  \tableofcontents
+  
+  \renewcommand{\listfigurename}{List of Figures and Listings}
+  \listoffigures
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  
+  \listoftables
+  \addcontentsline{toc}{chapter}{\listtablename}
+}
+%-------------------------------------------------------------------------------
+
+\input{FrontMatter/Nomenclature}
+%-------------------------------------------------------------------------------
+
+\mainmatter
 
 % We're using separate files for each main section
 % Please see the subdirectories Body/.. for the files.
 
-\input{FrontMatter/Abstract}
-
-% Set Roman numbering and exclude from counting
-\pagenumbering{roman}
-\setcounter{secnumdepth}{0}
-\tableofcontents
-\clearpage
-\listoffigures
-\clearpage
-\listoftables
-% \listofequations
-\clearpage
+\input{Body/Report/Introduction}
+\input{Body/Report/LiteratureReview}
+\input{Body/Report/Methodology}
+\input{Body/Report/Design}
+\input{Body/Report/Experimentation}
+\input{Body/Report/Results}
+\input{Body/Report/Conclusion}
 %-------------------------------------------------------------------------------
 
-% Set arabic, restart the counter, and set back to allow subsubsection
-\pagenumbering{arabic}
-\setcounter{secnumdepth}{3}
-\setcounter{page}{1}
-%-------------------------------------------------------------------------------
-
-\include{Body/Introduction}
-\include{Body/LiteratureReview}
-\include{Body/Methodology}
-\include{Body/Design}
-\include{Body/Experimentation}
-\include{Body/Results}
-\include{Body/Conclusion}
-%-------------------------------------------------------------------------------
-
+\backmatter
+ 
 \bibliography{Bibliography/Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+\clearpage
+
+\newcounter{Temp}
+\setcounter{Temp}{\value{page}}
+\mainmatter
+\setcounter{page}{\value{Temp}}
+\refstepcounter{page}
 %-------------------------------------------------------------------------------
 
-\input{Body/Appendix}
+\appendix
+
+\input{Appendix/Appendix1}
+\input{Appendix/Appendix2}
 
 \end{sloppypar}
 \end{document}

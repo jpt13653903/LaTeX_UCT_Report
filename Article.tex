@@ -1,31 +1,31 @@
-% Define some useful global switches...
-\newif\ifDraft
-\newif\ifNoFloat
+\input{Template/DefineFlags}
+\input{Template/Article}
 %-------------------------------------------------------------------------------
 
-% When "true", output in "draft" mode -- useful for proofing
-\Draftfalse
+\ifFormal
+  \title{The Title of Your Report}
+\else
+  \subjectcode  {Subject Code}
+  \subjectname  {Subject Name}
+  \title        {Title of Paper}
+  \author       {Author 1  \\ Author 2  \\ Author N }
+  \studentnumber{ATHNUM001 \\ ATHNUM010 \\ ATHNUM011}
+  \date         {22 April 2018} % Full date (leave out for \today)
+\fi
 
-% When "true", put listings, figures and tables where you put them, instead of floating:
-\NoFloattrue
-%-------------------------------------------------------------------------------
-
-\input{Preamble/Article}
-%-------------------------------------------------------------------------------
-
-\title{The Title of Your Report}
-
-\author{%
-  \setcounter{author}{1}
-  \IEEEauthorblockN{John G Deere\theauthor\ and Budy F. Jones\theauthor}
-  \setcounter{author}{1}
-  \IEEEauthorblockA{%
-    EEE4084F Class of 2017\\
-    University of Cape Town\\
-    South Africa\\
-    \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
+\ifFormal
+  \author{%
+    \setcounter{author}{1}
+    \IEEEauthorblockN{John G Deere\theauthor\ and Budy F. Jones\theauthor}
+    \setcounter{author}{1}
+    \IEEEauthorblockA{%
+      EEE4084F Class of 2017\\
+      University of Cape Town\\
+      South Africa\\
+      \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
+    }
   }
-}
+\fi
 %-------------------------------------------------------------------------------
 
 \begin{document}
@@ -35,6 +35,10 @@
 
 % We're using separate files for each main section
 % Please see the subdirectories Body/.. for the files.
+
+\ifFormal\else
+  \input{Template/Plagiarism}
+\fi
 
 \input{FrontMatter/Abstract}
 

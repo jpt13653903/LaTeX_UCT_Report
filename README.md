@@ -15,14 +15,29 @@ within a bash-like terminal.  The easiest way to do this is use
 
 ## Usage Instructions
 
+### Forking the Repository
+
 The intended use is to fork the repository.  This way, any updates to this 
 template repository can be merged into your repository, and vice versa.
+
+### Configuring the Flags
+
+The output style is controlled by means of flags defined in
+[`Template/DefineFlags.tex`](Template/DefineFlags.tex).  Set the flags as
+appropriate.
+
+### Building the Output
 
 - To build the report, run `make`.
 - To convert only the figures, run `make figures`.  This is useful if you're 
   using some other build chain or IDE, such as
   [TeXstudio](https://www.texstudio.org/)
 - To clean up all build products, run `make clean`.
+
+### Building All Options
+
+There is a special make target `all_options`, which generates output for all 8 
+combinations of the option flags for the Article and Report types.
 
 ## License
 

@@ -1,0 +1,108 @@
+\makeatletter
+  \def\@title {\textcolor{red}{Title}}
+
+  \def\@subtitle{\textcolor{red}{Subtitle}}
+  \newcommand\subtitle[1]{\def\@subtitle{#1}}
+
+  \def\@author{\textcolor{red}{Author}}
+
+  \def\@studentnumber{\textcolor{red}{Student Number}}
+  \newcommand\studentnumber[1]{\def\@studentnumber{#1}}
+  
+  \def\@supervisor{\textcolor{red}{Supervisor(s)}}
+  \newcommand\supervisor[1]{\def\@supervisor{#1}}
+  
+  \def\@department{\textcolor{red}{Department}}
+  \newcommand\department[1]{\def\@department{#1}}
+
+  \def\@subjectcode{\textcolor{red}{SUBJECT CODE}}
+  \newcommand\subjectcode[1]{\def\@subjectcode{\MakeUppercase{#1}}}
+
+  \def\@subjectname{\textcolor{red}{Subject Name}}
+  \newcommand\subjectname[1]{\def\@subjectname{#1}}
+
+  \def\@degree{\textcolor{red}{Degree}}
+  \newcommand\degree[1]{\def\@degree{#1}}
+
+  \def\@field{\textcolor{red}{Field}}
+  \newcommand\field[1]{\def\@field{#1}}
+
+  \def\@keywords{\textcolor{red}{Keywords}}
+  \newcommand\keywords[1]{\def\@keywords{#1}}
+  
+  \def\@date{\today}
+  
+  \renewcommand{\maketitle}{
+    \thispagestyle{empty}
+    \begin{center}
+      \vspace*{-20mm}
+      \ifFormal
+        % Modify the line below to insert your title.
+        {\Huge \@title}
+        \vskip 3mm
+        \hrule
+        % Modify the line below to insert your subtitle.
+        {\Large \@subtitle}
+        
+        \vfill\vfill\vfill
+        
+        \includegraphics[height=85mm]{Figures/UCT_Circular}
+        
+        \vfill\vfill
+        
+        Presented by:\\
+        \@author % Insert your name here
+        
+        \vfill\vfill
+        
+        Prepared for:\\
+        \@supervisor\\
+        Dept. of \@department\\University of Cape Town
+        
+        \vfill\vfill
+        
+        Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
+        fulfilment of the academic requirements for a \@degree\ degree in \@field.
+        
+        \vfill
+
+        \textbf{\@date}
+
+        \vfill
+    
+        \textbf{Key words:}\\
+        \@keywords
+        
+      \else % Not a formal thesis
+        \mbox{}\vfill
+        \includegraphics[height=55mm]{Figures/UCT_Circular}\\[10mm]
+        \textsc{\LARGE University of Cape Town}\\[20mm]
+        \textsc{\Large \@subjectcode}\\[5mm]
+        \textsc{\large \@subjectname}\\[5mm]
+        \rule{\linewidth}{0.2 mm} \\[4mm]
+        { \huge \bfseries \@title}\\
+        \rule{\linewidth}{0.2 mm} \\[15mm]
+
+        \begin{minipage}[t]{0.4\textwidth}
+          \begin{flushleft} \large
+            \emph{Authors:}\\
+            \@author
+          \end{flushleft}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[t]{0.4\textwidth}
+          \begin{flushright} \large
+            \emph{Student Numbers:} \\
+            \@studentnumber
+          \end{flushright}
+        \end{minipage}\\[2 cm]
+      
+        {\large \@date}\\[2 cm]
+      
+        \vfill\vfill
+      \fi
+    \end{center}
+    \clearpage
+  }
+\makeatother
+
