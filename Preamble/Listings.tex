@@ -1,5 +1,5 @@
-\usepackage{textcomp} %Used in listings for printing upright quotes
-\usepackage{listings} %For typesetting source code
+\usepackage{textcomp} % Used in listings for printing upright quotes
+\usepackage{listings} % For typesetting source code
 \lstloadlanguages{C++, Matlab, Verilog}
 %-------------------------------------------------------------------------------
 
@@ -24,7 +24,11 @@
 
 \newcommand{\StartListing}[2]{
   \setlength{\CodeWidth}{0.95\columnwidth}
-  \figure[!t]
+  \ifNoFloat
+    \figure[!htbp]
+  \else
+    \figure[!t]
+  \fi
   \refstepcounter{Listing}
   \addcontentsline{lof}{section}{Listing \theListing{}~~~#1}
   \label{lst:#2}
@@ -43,6 +47,9 @@
     \fi%
   }%
   \endfigure%
+  \ifNoFloat
+    \FloatBarrier
+  \fi
 }
 
 \newcommand{\StartListingInline}{%
