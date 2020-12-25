@@ -1,10 +1,27 @@
-\documentclass[conference]{IEEEtran}
+\documentclass[onecolumn, a4paper, 11pt, titlepage]{article}
+\renewcommand{\baselinestretch}{1.2} 
 \bibliographystyle{IEEEtran}
-
 \usepackage[none]{hyphenat}
+\usepackage{a4wide}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{lscape}
+
+\usepackage{amsmath}
+\numberwithin{figure}{section}
+\usepackage[nottoc,numbib]{tocbibind}
+\makeatletter
+ \renewcommand*\l@table{\@dottedtocline{3}{2em}{4.5em}}
+\makeatother
+% \makeatletter
+% \@addtoreset{table}{section}
+% \makeatother
+% \renewcommand\thetable{\arabic{\thesection}-\arabic{table}}
 
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage{caption}
 \usepackage{flafter}
 \usepackage{placeins}
 \usepackage{cite}
@@ -46,3 +63,8 @@
 \input{Preamble/Listings}
 \input{Preamble/HyperRef}
 %-------------------------------------------------------------------------------
+
+
+\usepackage{parskip}
+\usepackage{nomencl}
+\usepackage{pdfpages}

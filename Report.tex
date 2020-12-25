@@ -1,32 +1,43 @@
 \input{Preamble/Preamble}
 
-\title{A Cool Title}
-
-\author{%
- \setcounter{author}{1}
- \IEEEauthorblockN{John G Deere\theauthor\ and Budy Jones\theauthor}
- \setcounter{author}{1}
- \IEEEauthorblockA{%
-  EEE4084F Class of 2016\\
-  University of Cape Town\\
-  South Africa\\
-  \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
- }
-}
-
 \begin{document}
 \begin{sloppypar}
 
-\maketitle
+\input{FrontMatter/TitlePage.tex}
+\input{FrontMatter/TitlePage-Dissertation.tex}
+
+% We're using separate files for each main section
+% Please see the subdirectories Body/.. for the files.
 
 \input{FrontMatter/Abstract}
 
-\input{Body/Introduction}
-\input{Body/Methodology}
-\input{Body/Results}
-\input{Body/Conclusion}
+% Set Roman numbering and exclude from counting
+\pagenumbering{roman}
+\setcounter{secnumdepth}{0}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+% \listofequations
+\clearpage 
+
+% Set arabic, restart the counter, and set back to allow subsubsection
+\pagenumbering{arabic}
+\setcounter{secnumdepth}{3}
+\setcounter{page}{1}
+
+\include{Body/Introduction}
+\include{Body/LiteratureReview}
+\include{Body/Methodology}
+\include{Body/Design}
+\include{Body/Experimentation}
+\include{Body/Results}
+\include{Body/Conclusion}
 
 \bibliography{Bibliography/Bibliography}
+
+\input{Body/Appendix}
 
 \end{sloppypar}
 \end{document}
