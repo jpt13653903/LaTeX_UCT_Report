@@ -1,0 +1,83 @@
+\newlength{\TempFigureLength}
+%-------------------------------------------------------------------------------
+
+\newenvironment{FigureEnvironment}{
+ \begin{figure}[!t]%
+ \begin{center}%
+}{
+ \end{center}%
+ \end{figure}%
+}
+%-------------------------------------------------------------------------------
+
+\def\FigureSize{0.8}
+
+\newcommand{\Figure}[3][scale=\FigureSize]{%
+ \begin{FigureEnvironment}%
+  \refstepcounter{figure}
+  \addcontentsline{lof}{section}{Fig.~\thefigure{}~~~#2}
+  \label{fig:#3}%
+  \includegraphics[#1]{Figures/#3}\\[1em]%
+  \footnotesize
+  \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{#2}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+   \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{#2}}%
+  \else
+   Fig.~\thefigure{}.~~{#2}%
+  \fi
+ \end{FigureEnvironment}%
+}
+%-------------------------------------------------------------------------------
+
+\newenvironment{TableEnvironment}{
+ \begin{table}[!t]%
+ \begin{center}%
+}{
+ \end{center}%
+ \end{table}%
+}
+%-------------------------------------------------------------------------------
+
+\renewcommand{\thetable}{\Roman{table}}
+
+\newcommand{\Table}[5]{%
+ \begin{TableEnvironment}%
+  \refstepcounter{table}
+  \addcontentsline{lot}{section}{TABLE \thetable{}~~~#1}
+  \label{tab:#5}%
+  TABLE \thetable{}\\[1ex]
+  \settowidth{\TempFigureLength}{\textsc{#1}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+   \parbox{0.95\columnwidth}{\textsc{#1}}%
+  \else
+   \textsc{#1}%
+  \fi\\[1em]
+  \renewcommand{\arraystretch}{1.2}
+  \begin{tabular}{#2}
+   \hline
+   \hline
+    #3\\
+   \hline
+    #4
+   \hline
+   \hline
+  \end{tabular}
+ \end{TableEnvironment}%
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\Plot}[2]{
+ \begin{FigureEnvironment}%
+  \refstepcounter{figure}
+  \addcontentsline{lof}{section}{Fig.~\thefigure{}~~~#1}
+  \label{fig:#2}%
+  \includegraphics[width=0.95\columnwidth]{../../Octave/Prac_1/#2}\\[1em]%
+  \footnotesize
+  \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{#1}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+   \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{#1}}%
+  \else
+   Fig.~\thefigure{}.~~{#1}%
+  \fi
+ \end{FigureEnvironment}%
+}

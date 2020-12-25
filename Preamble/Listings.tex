@@ -1,0 +1,210 @@
+\usepackage{textcomp} %Used in listings for printing upright quotes
+\usepackage{listings} %For typesetting source code
+\lstloadlanguages{C++, Matlab, Verilog}
+%-------------------------------------------------------------------------------
+
+\lstset{%
+ frame      = single,%
+ basicstyle = \tiny\ttfamily,%
+ basewidth  = 1.3ex%
+% basicstyle = \scriptsize\ttfamily,%
+% basewidth  = 1.2ex%
+}
+%-------------------------------------------------------------------------------
+
+\definecolor{keyword}{rgb}{0.5, 0.0, 0.0}
+\definecolor{comment}{rgb}{0.0, 0.5, 0.0}
+\definecolor{string} {rgb}{0.0, 0.0, 0.7}
+\definecolor{define} {rgb}{1.0, 0.5, 0.0}
+\definecolor{string2}{rgb}{0.5, 0.0, 0.5}
+%-------------------------------------------------------------------------------
+
+\newcounter{Listing}
+\renewcommand{\theListing}{\arabic{Listing}}
+
+\newlength{\CodeWidth}
+
+\newcommand{\StartListing}[2]{
+ \setlength{\CodeWidth}{0.95\columnwidth}
+ \figure[!t]
+ \refstepcounter{Listing}
+ \addcontentsline{lof}{section}{Listing \theListing{}~~~#1}
+ \label{lst:#2}
+ \def\ListingCaption{#1}
+ \noindent\centering\minipage{\CodeWidth}%
+}
+\newcommand{\EndListing}{
+ \endminipage\\%
+ {%
+  \footnotesize%
+  \settowidth{\TempFigureLength}{Listing~\theListing{}.~~\ListingCaption}%
+  \ifdim \TempFigureLength > 0.95\columnwidth%
+   \parbox{0.95\columnwidth}{Listing~\theListing{}.~~\ListingCaption}%
+  \else%
+   Listing~\theListing{}.~~\ListingCaption%
+  \fi%
+ }%
+ \endfigure%
+}
+
+\newcommand{\StartListingInline}{%
+ \setlength{\CodeWidth}{0.95\columnwidth}%
+ \noindent\centering\minipage{\CodeWidth}%
+}
+\newcommand{\EndListingInline}  {\endminipage\par}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupMatlab}{
+ \lstset{%
+  language         = Matlab,%
+  upquote          = true,%
+  showstringspaces = false,%
+  keywordstyle     = {\color{keyword}\slshape},%
+  commentstyle     = {\color{comment}},%
+  stringstyle      = {\color{string}},
+  morecomment      = [l][\color{comment}]{\#}%
+ }%
+}
+
+\lstnewenvironment{Matlab_float}[2]{
+ \SetupMatlab
+ \StartListing{#1}{#2}
+}{
+ \EndListing
+}
+
+\lstnewenvironment{Matlab}{
+ \SetupMatlab
+ \StartListingInline
+}{
+ \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupGLSL}{
+ \lstset{%
+  language=C,%
+  upquote=true,%
+  showstringspaces=false,%
+  keywordstyle=   {\color{keyword}\slshape},%
+  commentstyle=   {\color{comment}},%
+  stringstyle =   {\color{string}},%
+  morecomment =[l][\color{define}]{\#},%
+  morekeywords={%
+   in,%
+   out,%
+   vec2,%
+   vec3,%
+   vec4,%
+   sin,%
+   length,%
+   texture2D,%
+   sampler2D,%
+   gl_FragColor,%
+   varying,%
+   uniform,%
+   discard%
+  }%
+ }%
+}
+
+\lstnewenvironment{GLSL_float}[2]{
+ \SetupGLSL
+ \StartListing{#1}{#2}
+}{
+ \EndListing
+}
+
+\lstnewenvironment{GLSL}{
+ \SetupGLSL
+ \StartListingInline
+}{
+ \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupOpenCL}{
+ \lstset{%
+  language=C,%
+  upquote=true,%
+  showstringspaces=false,%
+  keywordstyle=   {\color{keyword}\slshape},%
+  commentstyle=   {\color{comment}},%
+  stringstyle =   {\color{string}},%
+  morecomment =[l][\color{define}]{\#},%
+  morekeywords={%
+   __kernel,%
+   __global,%
+   __local,%
+  get_global_id%
+  }%
+ }%
+}
+
+\lstnewenvironment{OpenCL_float}[2]{
+ \SetupOpenCL
+ \StartListing{#1}{#2}
+}{
+ \EndListing
+}
+
+\lstnewenvironment{OpenCL}{
+ \SetupOpenCL
+ \StartListingInline
+}{
+ \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupVerilog}{
+ \lstset{%
+  language=Verilog,%
+  upquote=true,%
+  showstringspaces=false,%
+  keywordstyle=   {\color{keyword}\slshape},%
+  commentstyle=   {\color{comment}},%
+  stringstyle =   {\color{string}},%
+  morecomment =[l][\color{define}]{`}%
+ }%
+}
+
+\lstnewenvironment{Verilog_float}[2]{
+ \SetupVerilog
+ \StartListing{#1}{#2}
+}{
+ \EndListing
+}
+
+\lstnewenvironment{Verilog}{
+ \SetupVerilog
+ \StartListingInline
+}{
+ \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupCpp}{
+ \lstset{%
+  language         = C++,%
+  upquote          = true,%
+  showstringspaces = false,%
+  keywordstyle     = {\color{keyword}\slshape},%
+  commentstyle     = {\color{comment}},%
+  stringstyle      = {\color{string}}%
+ }%
+}
+
+\lstnewenvironment{Cpp_float}[2]{
+ \SetupCpp
+ \StartListing{#1}{#2}
+}{
+ \EndListing
+}
+
+\lstnewenvironment{Cpp}{
+ \SetupCpp
+ \StartListingInline
+}{
+ \EndListingInline
+}
+%-------------------------------------------------------------------------------

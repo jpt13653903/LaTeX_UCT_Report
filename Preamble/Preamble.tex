@@ -1,0 +1,48 @@
+\documentclass[conference]{IEEEtran}
+\bibliographystyle{IEEEtran}
+
+\usepackage[none]{hyphenat}
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{flafter}
+\usepackage{placeins}
+\usepackage{cite}
+%-------------------------------------------------------------------------------
+
+\newcommand{\micro}{\textmu}
+\newcommand{\Ohm}{$\Omega$}
+
+\newcommand{\etal}       {\emph{et~al.}}
+\newcommand{\ie}         {i.e.}
+\newcommand{\bookcite}[2]{\cite{#1}~pg.~#2}
+%-------------------------------------------------------------------------------
+
+\newcounter{author}
+\renewcommand{\theauthor}{\stepcounter{author}\raisebox{1ex}{\small\fnsymbol{author}}}
+%-------------------------------------------------------------------------------
+
+\renewcommand{\today}{%
+ \number\day\space%
+ \ifcase\month%
+  \or January%
+  \or February%
+  \or March%
+  \or April%
+  \or May%
+  \or June%
+  \or July%
+  \or August%
+  \or September%
+  \or October%
+  \or November%
+  \or December%
+ \fi%
+ \space\number\year%
+}
+%-------------------------------------------------------------------------------
+
+\input{Preamble/TablesAndFigures}
+\input{Preamble/Listings}
+\input{Preamble/HyperRef}
+%-------------------------------------------------------------------------------
