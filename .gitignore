@@ -1,0 +1,13 @@
+.vs
+.vscode
+*.swp
+~*
+
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.gz
+*.zip
+
