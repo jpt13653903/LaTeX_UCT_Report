@@ -18,15 +18,17 @@ for arg in $@; do
 done
 #-------------------------------------------------------------------------------
 
-echo '\newif\ifDraft  % When "true", output in "draft" mode -- useful for proofing'                             >  Template/Flags.tex
-echo '\newif\ifFloat  % When "false", put listings, figures and tables where you put them, instead of floating' >> Template/Flags.tex
-echo '\newif\ifFormal % When "true", use a more formal style (including a different title page)'                >> Template/Flags.tex
-echo '%-------------------------------------------------------------------------------'                         >> Template/Flags.tex
-echo ''                                                                                                         >> Template/Flags.tex
-echo "\\Draft$Draft"                                                                                            >> Template/Flags.tex
-echo "\\Float$Float"                                                                                            >> Template/Flags.tex
-echo "\\Formal$Formal"                                                                                          >> Template/Flags.tex
-echo '%-------------------------------------------------------------------------------'                         >> Template/Flags.tex
+echo '\newif\ifDraft  % When "true", output in "draft" mode -- useful for proofing'                             >  Article/Template/Flags.tex
+echo '\newif\ifFloat  % When "false", put listings, figures and tables where you put them, instead of floating' >> Article/Template/Flags.tex
+echo '\newif\ifFormal % When "true", use a more formal style (including a different title page)'                >> Article/Template/Flags.tex
+echo '%-------------------------------------------------------------------------------'                         >> Article/Template/Flags.tex
+echo ''                                                                                                         >> Article/Template/Flags.tex
+echo "\\Draft$Draft"                                                                                            >> Article/Template/Flags.tex
+echo "\\Float$Float"                                                                                            >> Article/Template/Flags.tex
+echo "\\Formal$Formal"                                                                                          >> Article/Template/Flags.tex
+echo '%-------------------------------------------------------------------------------'                         >> Article/Template/Flags.tex
+
+cp -f Article/Template/Flags.tex Report/Template/Flags.tex
 #-------------------------------------------------------------------------------
 
 Suffix=""
@@ -36,7 +38,7 @@ if [ $Formal == true ]; then Suffix="$Suffix"_Formal; fi
 #-------------------------------------------------------------------------------
 
 make
-mv -f Article.pdf Output/Article$Suffix.pdf
-mv -f Report.pdf  Output/Report$Suffix.pdf
+mv -f Article/Article.pdf Output/Article$Suffix.pdf
+mv -f Report/Report.pdf   Output/Report$Suffix.pdf
 #-------------------------------------------------------------------------------
 

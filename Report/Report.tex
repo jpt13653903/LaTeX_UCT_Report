@@ -1,5 +1,5 @@
 \input{Template/Flags}
-\input{Template/Report}
+\input{Template/Template}
 %-------------------------------------------------------------------------------
 
 % For the date, use full day month year for an informal report, but only
@@ -32,7 +32,7 @@
 \maketitle
 %-------------------------------------------------------------------------------
 
-\input{Template/Plagiarism}
+\input{../Template/Plagiarism}
 
 \setcounter{page}{0}
 \input{FrontMatter/Abstract}
@@ -61,18 +61,18 @@
 % We're using separate files for each main section
 % Please see the subdirectories Body/.. for the files.
 
-\input{Body/Report/Introduction}
-\input{Body/Report/LiteratureReview}
-\input{Body/Report/Methodology}
-\input{Body/Report/Design}
-\input{Body/Report/Experimentation}
-\input{Body/Report/Results}
-\input{Body/Report/Conclusion}
+\input{Chapters/Introduction}
+\input{Chapters/LiteratureReview}
+\input{Chapters/Methodology}
+\input{Chapters/Design}
+\input{Chapters/Experimentation}
+\input{Chapters/Results}
+\input{Chapters/Conclusion}
 %-------------------------------------------------------------------------------
 
 \backmatter
  
-\bibliography{Bibliography/Bibliography}
+\bibliography{../Bibliography/Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}
 \clearpage
 

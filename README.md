@@ -13,6 +13,14 @@ within a bash-like terminal.  The easiest way to do this is to use
 [GNU Make](https://www.gnu.org/software/make/), which comes standard with 
 [TDM-GCC](https://jmeubank.github.io/tdm-gcc/).
 
+## Repository Structure
+
+The [`Bibliography`](Bibliography), [`Figures`](Figures) and 
+[`Template`](Template) folders contain shared resources that both report types 
+make use of.  The two report types are situated in the [`Article`](Article) 
+and [`Report`](Report) folders.  The [`Output`](Output) folder contains the
+output generated with all possible option flags.
+
 ## Usage Instructions
 
 ### Forking the Repository
@@ -22,15 +30,14 @@ template repository can be merged into your repository, and vice versa.
 
 ### Configuring the Flags
 
-The output style is controlled by means of flags defined in
-[`Template/Flags.tex`](Template/Flags.tex).  Set the flags as appropriate.
+The output style is controlled by means of flags defined in the
+`Template/Flags.tex` folder of each report type.  Set the flags as appropriate.
 
 ### Building the Output
 
 - To build the report, run `make`.
 - To convert only the figures, run `make figures`.  This is useful if you're 
-  using some other build chain or IDE, such as
-  [TeXstudio](https://www.texstudio.org/)
+  using some other build chain or IDE, such as [TeXstudio](https://www.texstudio.org/)
 - To clean up all build products, run `make clean`.
 
 ### Building All Options
