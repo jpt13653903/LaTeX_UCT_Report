@@ -9,6 +9,7 @@ figures:
 	make -C Figures
 
 clean:
+	rm -rf Output
 	make -C Figures clean
 	make -C Article clean
 	make -C Report  clean
