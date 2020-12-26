@@ -3,10 +3,10 @@
 
 \newenvironment{FigureEnvironment}[1]{
   \def\FigureCaption{#1}
-  \ifNoFloat
-    \begin{figure}[!htbp]%
-  \else
+  \ifFloat
     \begin{figure}[!t]%
+  \else
+    \begin{figure}[!htbp]%
   \fi
   \begin{center}%
   \refstepcounter{figure}
@@ -29,7 +29,7 @@
   \fi
   \end{center}%
   \end{figure}%
-  \ifNoFloat
+  \ifFloat\else
     \FloatBarrier
   \fi
 }
@@ -43,22 +43,22 @@
 \newcommand{\Figure}[3][scale=\FigureSize]{%
   \begin{FigureEnvironment}{#2}%
     \label{fig:#3}%
-    \includegraphics[#1]{Figures/#3}\\[1em]%
+    \includegraphics[#1]{\FiguresPath/#3}\\[1em]%
   \end{FigureEnvironment}%
 }
 %-------------------------------------------------------------------------------
 
 \newenvironment{TableEnvironment}{
-  \ifNoFloat
-    \begin{table}[!htbp]%
-  \else
+  \ifFloat
     \begin{table}[!t]%
+  \else
+    \begin{table}[!htbp]%
   \fi
   \begin{center}%
 }{
   \end{center}%
   \end{table}%
-  \ifNoFloat
+  \ifFloat\else
     \FloatBarrier
   \fi
 }

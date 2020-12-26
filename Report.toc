@@ -14,9 +14,9 @@
 \contentsline {chapter}{\numberline {5}Experimentation}{7}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Results}{8}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Figures}{8}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Tables}{8}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Tables}{10}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Pictures and Screen-shots}{10}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Maths}{11}{section.6.4}%
+\contentsline {section}{\numberline {6.4}Maths}{12}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Conclusion}{13}{chapter.7}%
 \contentsline {chapter}{Bibliography}{14}{chapter*.5}%
 \contentsline {chapter}{\numberline {A}Item 1}{16}{appendix.A}%

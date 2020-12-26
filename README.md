@@ -23,8 +23,7 @@ template repository can be merged into your repository, and vice versa.
 ### Configuring the Flags
 
 The output style is controlled by means of flags defined in
-[`Template/DefineFlags.tex`](Template/DefineFlags.tex).  Set the flags as
-appropriate.
+[`Template/Flags.tex`](Template/Flags.tex).  Set the flags as appropriate.
 
 ### Building the Output
 
@@ -37,7 +36,8 @@ appropriate.
 ### Building All Options
 
 There is a special make target `all_options`, which generates output for all 8 
-combinations of the option flags for the Article and Report types.
+combinations of the option flags for both Article and Report types.  The 
+resulting PDFs are saved in the [`Output`](Output) folder.
 
 ## License
 

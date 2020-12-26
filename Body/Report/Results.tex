@@ -69,9 +69,9 @@ Tables are often a convenient means by which to specify lists of parameters.  An
 
 When you include screen-shots, pdf\LaTeX{} supports JPG and PNG file formats.  PNG is preferred for screen-shots, as it is a loss-less format.  JPG is preferred for photos, as it results in a smaller file size.  It's generally a good idea to resize photos (not screen-shots) to be no more that 300~dpi, in order to reduce file size.  For 2-column article format papers, this translates to a maximum width of 1024.  \textbf{Never change the aspect ratio of screen-shots and pictures!}
 
-It is highly recommended to make use of the \verb|\Figure| macro for figures.  It puts all the formatting tweaks in one place, so that you don't need to update all the individual figure inclusion points when you want to do a styling update.  The file name is used for the \LaTeX\ label, such as ``Fig.~\ref{fig:UCT_Circular}''.
+It is highly recommended to make use of the \verb|\Figure| macro for figures.  It puts all the formatting tweaks in one place, so that you don't need to update all the individual figure inclusion points when you want to do a styling update.  The file name is used for the \LaTeX\ label, such as ``Fig.~\ref{fig:UCT.pdf}''.
 
-\Figure[width=0.6\columnwidth]{An example image with custom scaling}{UCT_Circular}
+\Figure[width=0.6\columnwidth]{An example image with custom scaling}{UCT.pdf}
 
 Make sure to always use the best quality image possible.  Use JPEG for photos, PNG for screen-shots and PDF (scalable vector graphics) for everything else.  JPEG is lossy, but good for photos, whereas PNG is lossless and good for images with large areas of solid colour, as can be seen in Fig.~\ref{fig:FigureQuality}.
 
@@ -89,7 +89,7 @@ Make sure to always use the best quality image possible.  Use JPEG for photos, P
   \end{minipage}
   \hfill
   \begin{minipage}[b]{0.3\textwidth}\centering\setlength{\parindent}{0mm}
-    \includegraphics[width=\textwidth]{Figures/UCT_Circular.pdf}\\%
+    \includegraphics[width=\textwidth]{Figures/UCT.pdf}\\%
     {\small (c)~~SVG}%
   \end{minipage}
   \hfill\mbox{}\\[1mm]

@@ -21,8 +21,8 @@
   \def\@subjectname{\textcolor{red}{Subject Name}}
   \newcommand\subjectname[1]{\def\@subjectname{#1}}
 
-  \def\@degree{\textcolor{red}{Degree}}
-  \newcommand\degree[1]{\def\@degree{#1}}
+  \def\@degreename{\textcolor{red}{Degree}}
+  \newcommand\degreename[1]{\def\@degreename{#1}}
 
   \def\@field{\textcolor{red}{Field}}
   \newcommand\field[1]{\def\@field{#1}}
@@ -46,7 +46,7 @@
         
         \vfill\vfill\vfill
         
-        \includegraphics[height=85mm]{Figures/UCT_Circular}
+        \includegraphics[height=85mm]{Template/Figures/UCT_Circular}
         
         \vfill\vfill
         
@@ -62,7 +62,7 @@
         \vfill\vfill
         
         Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
-        fulfilment of the academic requirements for a \@degree\ degree in \@field.
+        fulfilment of the academic requirements for a \@degreename\ degree in \@field.
         
         \vfill
 
@@ -75,7 +75,7 @@
         
       \else % Not a formal thesis
         \mbox{}\vfill
-        \includegraphics[height=55mm]{Figures/UCT_Circular}\\[10mm]
+        \includegraphics[height=55mm]{Template/Figures/UCT_Circular}\\[10mm]
         \textsc{\LARGE University of Cape Town}\\[20mm]
         \textsc{\Large \@subjectcode}\\[5mm]
         \textsc{\large \@subjectname}\\[5mm]
