@@ -75,6 +75,46 @@
 }
 %-------------------------------------------------------------------------------
 
+\newlength{\HypothesisLabelWidth}
+\settowidth{\HypothesisLabelWidth}{\textbf{Hypothesis~H99:~}}
+
+\newlength{\HypothesisBodyWidth}
+
+\newcounter{Hypothesis}
+\setcounter{Hypothesis}{-1}
+\renewcommand{\theHypothesis}{H\arabic{Hypothesis}}
+
+\ifTwoColumn
+  \setlength{\HypothesisBodyWidth}{0.9\columnwidth}%
+
+  \newcommand{\Hypothesis}[2]{%
+    \vspace{1em}
+    \refstepcounter{Hypothesis}%
+    \label{hyp:#1}%
+    \textbf{Hypothesis~\theHypothesis:}\\
+    \mbox{}\hfill
+    \begin{minipage}[t]{\HypothesisBodyWidth}%
+      #2\par%
+    \end{minipage}
+    \vspace{1em}
+  }
+\else
+  \setlength  {\HypothesisBodyWidth}{0.85\textwidth}%
+  \addtolength{\HypothesisBodyWidth}{-\HypothesisLabelWidth}
+
+  \newcommand{\Hypothesis}[2]{%
+    \refstepcounter{Hypothesis}%
+    \label{hyp:#1}%
+    \hspace{0.05\textwidth}
+    \makebox[\HypothesisLabelWidth][l]{\textbf{Hypothesis~\theHypothesis:}}%
+    \begin{minipage}[t]{\HypothesisBodyWidth}%
+      #2\par%
+    \end{minipage}
+    \vspace{1em}
+  }
+\fi
+%-------------------------------------------------------------------------------
+
 \definecolor{Old}     {rgb}{0.7, 0.7, 0.8}
 \definecolor{Note}    {rgb}{0.0, 0.5, 0.0}
 \definecolor{Todo}    {rgb}{1.0, 0.0, 0.0}

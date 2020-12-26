@@ -1,4 +1,10 @@
 \newif\ifArticle\Articletrue
+\newif\ifTwoColumn
+\ifFormal
+  \TwoColumntrue
+\else
+  \TwoColumnfalse
+\fi
 %-------------------------------------------------------------------------------
 
 \ifFormal
@@ -10,8 +16,6 @@
 %-------------------------------------------------------------------------------
 
 \ifFormal\else
-  \renewcommand{\baselinestretch}{1.2}
-  
   % Widen the text area
   \usepackage{a4wide}
   

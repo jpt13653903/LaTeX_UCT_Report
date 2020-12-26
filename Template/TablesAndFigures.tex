@@ -12,12 +12,8 @@
   \refstepcounter{figure}
   \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
 }{
-  \ifArticle
-    \ifFormal
-      \footnotesize
-    \else
-      \small
-    \fi
+  \ifTwoColumn
+    \footnotesize
   \else
     \small
   \fi
@@ -36,9 +32,9 @@
 %-------------------------------------------------------------------------------
 
 \def\FigureSize{1.2}
-\ifArticle\ifFormal
+\ifTwoColumn
   \def\FigureSize{0.8}
-\fi\fi
+\fi
 
 \newcommand{\Figure}[3][scale=\FigureSize]{%
   \begin{FigureEnvironment}{#2}%

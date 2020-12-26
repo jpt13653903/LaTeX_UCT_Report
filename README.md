@@ -31,7 +31,7 @@ template repository can be merged into your repository, and vice versa.
 ### Configuring the Flags
 
 The output style is controlled by means of flags defined in the
-`Template/Flags.tex` folder of each report type.  Set the flags as appropriate.
+`Template/Flags.tex` file of each report type.  Set the flags as appropriate.
 
 ### Building the Output
 
