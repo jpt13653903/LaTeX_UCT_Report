@@ -2,17 +2,17 @@
 .SECONDARY:
 
 all: figures
-	make -C Article
-	make -C Report
+	$(MAKE) -C Article
+	$(MAKE) -C Report
 
 figures:
-	make -C Figures
+	$(MAKE) -C Figures
 
 clean:
 	rm -rf Output
-	make -C Figures clean
-	make -C Article clean
-	make -C Report  clean
+	$(MAKE) -C Figures clean
+	$(MAKE) -C Article clean
+	$(MAKE) -C Report  clean
 
 all_options:
 	mkdir -p Output

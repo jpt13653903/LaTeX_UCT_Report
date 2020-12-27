@@ -16,11 +16,11 @@ Output = Report.pdf
 all: $(Output)
 
 figures:
-	make -C ../ figures
+	$(MAKE) -C ../ figures
 
 clean:
 	rm -f *.aux *.bbl *.blg *.log *.out *.pdf *.gz *.toc *.lof *.lot
-	make -C ../Figures clean
+	$(MAKE) -C ../Figures clean
 #-------------------------------------------------------------------------------
 
 $(Output): figures $(Source)
