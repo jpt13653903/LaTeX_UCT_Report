@@ -1,0 +1,53 @@
+\input{Template/Flags}
+\input{Template/Template}
+%-------------------------------------------------------------------------------
+
+\ifFormal
+  \title{The Title of Your Report}
+\else
+  \subjectcode  {Subject Code}
+  \subjectname  {Subject Name}
+  \title        {Title of Paper}
+  \author       {Author 1  \\ Author 2  \\ Author N }
+  \studentnumber{ATHNUM001 \\ ATHNUM010 \\ ATHNUM011}
+  \date         {22 April 2018} % Full date (leave out for \today)
+\fi
+
+\ifFormal
+  \author{%
+    \setcounter{author}{1}
+    \IEEEauthorblockN{John G Deere\theauthor\ and Budy F. Jones\theauthor}
+    \setcounter{author}{1}
+    \IEEEauthorblockA{%
+      EEE4084F Class of 2017\\
+      University of Cape Town\\
+      South Africa\\
+      \theauthor{}DRXJOH042~~\theauthor{}JNSBUD099\\
+    }
+  }
+\fi
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\begin{sloppypar}
+
+\maketitle
+
+% We're using separate files for each main section
+% Please see the subdirectories Body/.. for the files.
+
+\ifFormal\else
+  \input{../Template/Plagiarism}
+\fi
+
+\input{Body/Abstract}
+\input{Body/Introduction}
+\input{Body/Methodology}
+\input{Body/Results}
+\input{Body/Conclusion}
+
+\bibliography{../Bibliography/Bibliography}
+
+\end{sloppypar}
+\end{document}
+%-------------------------------------------------------------------------------

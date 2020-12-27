@@ -1,33 +1,28 @@
-Figures  = $(shell find Figures -iname "*.svg")
-Figures := $(Figures:%.svg=%.pdf)
-TexFiles = $(shell find . -iname "*.tex")
-#-------------------------------------------------------------------------------
-
-Output = Report.pdf
-#-------------------------------------------------------------------------------
-
-.PHONY: all figures clean
+.PHONY: all figures clean all_options
 .SECONDARY:
 
-all: $(Output)
+all: figures
+	make -C Article
+	make -C Report
 
-figures: $(Figures)
+figures:
+	make -C Figures
 
 clean:
-	rm -f $(Figures)
-	rm -f *.aux *.bbl *.blg *.log *.out *.pdf *.gz *.toc
-#-------------------------------------------------------------------------------
+	rm -rf Output
+	make -C Figures clean
+	make -C Article clean
+	make -C Report  clean
 
-%.pdf: %.svg
-	inkscape --without-gui --file="$<" --export-area-drawing --export-text-to-path --export-pdf-version="1.5" --export-pdf="$@"
-#-------------------------------------------------------------------------------
-
-%.pdf: $(TexFiles) $(Figures)
-	bibtex $*
-	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
-	bibtex $*
-	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
-	bibtex $*
-	pdflatex -synctex=1 -interaction=nonstopmode -quiet $*.tex
+all_options:
+	mkdir -p Output
+	sh Build.sh Draft  Float  Formal
+	sh Build.sh Draft  Float
+	sh Build.sh Draft         Formal
+	sh Build.sh Draft
+	sh Build.sh        Float  Formal
+	sh Build.sh        Float
+	sh Build.sh               Formal
+	sh Build.sh 
 #-------------------------------------------------------------------------------
 

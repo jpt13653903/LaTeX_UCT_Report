@@ -1,0 +1,123 @@
+\chapter{Nomenclature}
+\markboth{\MakeUppercase{Nomenclature}}{\MakeUppercase{Nomenclature}}
+{\renewcommand{\thesection}{\arabic{section}}
+
+\section{Acronyms}
+
+\begin{List}
+  \abbrhead{A}
+    \abbr{A}     {Amperes}
+    \abbr{AC}    {Alternating Current}
+    \abbr{ADC}   {Analogue to Digital Converter}
+    \abbr{API}   {Application Programmer's Interface}
+    \abbr{ARM}   {Advanced RISC Machine}
+    \abbr{ASIC}  {Application Specific Integrated Circuit}
+    \abbr{AXI}   {Advanced Extensible Interface}
+  \abbrhead{B}
+    \abbr{BAR}   {Base Address Register}
+    \abbr{BCD}   {Binary-Coded Decimal}
+    \abbr{Bd}    {Baud, in symbols per second}
+  \abbrhead{C}
+    \abbr{CFAR}  {Constant False Alarm Rate}
+    \abbr{CMOS}  {Complimentary Metal-Oxide Semiconductor}
+    \abbr{CPLD}  {Complex Programmable Logic Device}
+  \abbrhead{D}
+    \abbr{dBm}   {Deci-Bell, relative to 1 mW}
+    \abbr{DC}    {Direct Current}
+    \abbr{DDC}   {Digital Down Converter}
+    \abbr{DDS}   {Direct Digital Synthesis}
+    \abbr{DMA}   {Direct Memory Access}
+    \abbr{DSP}   {Digital Signal Processor (or processing)}
+  \abbrhead{E}
+    \abbr{EDA}   {Electronic Design Automation}
+  \abbrhead{F}
+    \abbr{FIFO}  {First-in, First-out (queue)}
+    \abbr{FIR}   {Finite Impulse Response}
+    \abbr{FMC}   {FPGA Mezzanine Card}
+    \abbr{FPGA}  {Field Programmable Gate Array}
+    \abbr{FSM}   {Finite State Machine}
+  \abbrhead{G}
+    \abbr{GUI}   {Graphical User Interface}
+  \abbrhead{H}
+    \abbr{HDL}   {Hardware Description Language}
+    \abbr{HPS}   {Hard Processor System}
+    \abbr{HSTL}  {High Speed Transfer Logic}
+  \abbrhead{I}
+    \abbr{I/O}   {Inputs/Outputs}
+    \abbr{\IIC}  {Inter-IC}
+    \abbr{IC}    {Integrated Circuit}
+    \abbr{IDE}   {Integrated Development Environment}
+  \abbrhead{L}
+    \abbr{LE}    {Logic Element}
+    \abbr{LSb}   {Least Significant Bit}
+    \abbr{LSB}   {Least Significant Byte}
+    \abbr{LUT}   {Look-Up Table}
+    \abbr{LVCMOS}{Low Voltage Complementary Metal Oxide Semiconductor}
+    \abbr{LVDS}  {Low Voltage Differential Signalling}
+    \abbr{LVPECL}{Low Voltage Positive Emitter Coupled Logic}
+    \abbr{LVTTL} {Low Voltage Transistor-Transistor Logic}
+  \abbrhead{M}
+    \abbr{MIMO}  {Multiple Input Multiple Output}
+    \abbr{MISO}  {Master Input / Slave Output}
+    \abbr{MOSI}  {Master Output / Slave Input}
+    \abbr{MSb}   {Most Significant Bit}
+    \abbr{MSB}   {Most Significant Byte}
+    \abbr{MSI}   {Message Signalled Interrupt}
+  \abbrhead{N}
+    \abbr{NCO}   {Numerically Controlled Oscillator}
+    \abbr{NTP}   {Network Time Protocol}
+  \abbrhead{P}
+    \abbr{PC}    {Personal Computer}
+    \abbr{PCB}   {Printed Circuit Board}
+    \abbr{PCI}   {Peripheral Component Interconnect}
+    \abbr{PCIe}  {PCI Express}
+    \abbr{PLL}   {Phase Locked Loop}
+    \abbr{PPDS}  {Point-to-Point Differential Signalling}
+    \abbr{PRF}   {Pulse Repetition Frequency}
+    \abbr{PRI}   {Pulse Repetition Interval}
+    \abbr{PSU}   {Power Supply Unit}
+  \abbrhead{R}
+    \abbr{RADAR} {Radio-Assisted Direction and Ranging}
+    \abbr{REST}  {Representational State Transfer}
+    \abbr{RF}    {Radio Frequency}
+    \abbr{RISC}  {Reduced Instruction Set Computer}
+    \abbr{RMS}   {Root Mean Square}
+    \abbr{RPM}   {Revolutions per Minute}
+    \abbr{RSDS}  {Reduced Swing Differential Signalling}
+  \abbrhead{S}
+    \abbr{SI}    {Syst\`eme International d'Unit\'es}
+    \abbr{SoC}   {System On Chip}
+    \abbr{SPI}   {Serial Peripheral Interface}
+    \abbr{SSTL}  {Stub Series Terminated Logic}
+  \abbrhead{T}
+    \abbr{TCP}   {Transmission Control Protocol}
+    \abbr{TTL}   {Transistor-Transistor Logic}
+  \abbrhead{U}
+    \abbr{UART}  {Universal Asynchronous Receiver Transmitter}
+    \abbr{UDP}   {User Datagram Protocol}
+    \abbr{UFM}   {User Flash Memory}
+    \abbr{URL}   {Uniform Resource Locator}
+  \abbrhead{V}
+    \abbr{V}     {Voltage}
+    \abbr{VHDL}  {VLSI HDL}
+    \abbr{VLSI}  {Very Large-Scale Integration}
+  \abbrhead{X}
+    \abbr{XML}   {eXtensible Markup Language}
+\end{List}
+
+\clearpage
+\section{Terminology}
+
+\definition{Developer}       {FPGA firmware developer, using any firmware development tool.}
+\definition{Device}          {The specific target FPGA.}
+\definition{Megafunction}    {A target-specific module, typically generated from within the vendor IDE, after the Altera nomenclature.}
+\definition{Module}          {Akin to a Verilog module; i.e.~unit of digital circuit that has ports to the outside world and can exist at any level of the design hierarchy.}
+\definition{Object file}     {An intermediary file used in the ALCHA compilation process.  It is the reult of compiling a single translation unit and describes a collection of objects.}
+\definition{Peripheral}      {Any device, external to the FPGA, that interfaces directly with the FPGA.}
+\definition{Platform}        {The platform that the ALCHA compiler runs on, including operating system and computer hardware.}
+\definition{Target}          {The platform ALCHA is compiling to, including FPGA, PCB, peripherals and vendor IDE.}
+\definition{Translation unit}{Akin to a C language translation unit, i.e.~a collection of source files and headers that translate to a single object file}
+\definition{User}            {The developer who is using ALCHA to develop FPGA firmware.}
+\definition{Vendor}          {The FPGA manufacturer.}
+
+}

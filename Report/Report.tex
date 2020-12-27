@@ -1,0 +1,93 @@
+\input{Template/Flags}
+\input{Template/Template}
+%-------------------------------------------------------------------------------
+
+% For the date, use full day month year for an informal report, but only
+% "month year" for a format thesis.  If nothing is provided, "\today" is used.
+
+\ifFormal
+  \title        {Title of Dissertation}
+  \subtitle     {Subtitle}
+  \author       {Your Name}
+  \supervisor   {Your Supervisor(s)}
+  \department   {Electrical and Electronic Engineering}
+  \degreename   {Bachelor of Science}
+  \field        {Electrical and Computer Engineering}
+  \keywords     {Some keywords relating to your research}
+  \date         {November 2020} % Month Year only (leave out for \today)
+\else
+  \subjectcode  {Subject Code}
+  \subjectname  {Subject Name}
+  \title        {Title of Paper}
+  \author       {Author 1  \\ Author 2  \\ Author N }
+  \studentnumber{ATHNUM001 \\ ATHNUM010 \\ ATHNUM011}
+  \date         {22 April 2018} % Full date (leave out for \today)
+\fi
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\begin{sloppypar}
+
+\frontmatter
+\maketitle
+%-------------------------------------------------------------------------------
+
+\input{../Template/Plagiarism}
+
+\setcounter{page}{0}
+\input{FrontMatter/Abstract}
+  
+{
+  \clearpage
+  \thispagestyle{empty}
+  
+  \renewcommand{\baselinestretch}{0}\normalsize
+  \tableofcontents
+  
+  \renewcommand{\listfigurename}{List of Figures and Listings}
+  \listoffigures
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  
+  \listoftables
+  \addcontentsline{toc}{chapter}{\listtablename}
+}
+%-------------------------------------------------------------------------------
+
+\input{FrontMatter/Nomenclature}
+%-------------------------------------------------------------------------------
+
+\mainmatter
+
+% We're using separate files for each main section
+% Please see the subdirectories Body/.. for the files.
+
+\input{Chapters/Introduction}
+\input{Chapters/LiteratureReview}
+\input{Chapters/Methodology}
+\input{Chapters/Design}
+\input{Chapters/Experimentation}
+\input{Chapters/Results}
+\input{Chapters/Conclusion}
+%-------------------------------------------------------------------------------
+
+\backmatter
+ 
+\bibliography{../Bibliography/Bibliography}
+\addcontentsline{toc}{chapter}{Bibliography}
+\clearpage
+
+\newcounter{Temp}
+\setcounter{Temp}{\value{page}}
+\mainmatter
+\setcounter{page}{\value{Temp}}
+\refstepcounter{page}
+%-------------------------------------------------------------------------------
+
+\appendix
+
+\input{Appendix/Appendix1}
+\input{Appendix/Appendix2}
+
+\end{sloppypar}
+\end{document}
+%-------------------------------------------------------------------------------

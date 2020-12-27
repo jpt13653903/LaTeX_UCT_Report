@@ -1,0 +1,81 @@
+\newlength{\TempFigureLength}
+%-------------------------------------------------------------------------------
+
+\newenvironment{FigureEnvironment}[1]{
+  \def\FigureCaption{#1}
+  \ifFloat
+    \begin{figure}[!t]%
+  \else
+    \begin{figure}[!htbp]%
+  \fi
+  \begin{center}%
+  \refstepcounter{figure}
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
+}{
+  \ifTwoColumn
+    \footnotesize
+  \else
+    \small
+  \fi
+  \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{\FigureCaption}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+    \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{\FigureCaption}}%
+  \else
+    Fig.~\thefigure{}.~~{\FigureCaption}%
+  \fi
+  \end{center}%
+  \end{figure}%
+  \ifFloat\else
+    \FloatBarrier
+  \fi
+}
+%-------------------------------------------------------------------------------
+
+\def\FigureSize{1.2}
+\ifTwoColumn
+  \def\FigureSize{0.8}
+\fi
+
+\newcommand{\Figure}[3][scale=\FigureSize]{%
+  \begin{FigureEnvironment}{#2}%
+    \label{fig:#3}%
+    \includegraphics[#1]{../Figures/#3}\\[1em]%
+  \end{FigureEnvironment}%
+}
+%-------------------------------------------------------------------------------
+
+\newenvironment{TableEnvironment}{
+  \ifFloat
+    \begin{table}[!t]%
+  \else
+    \begin{table}[!htbp]%
+  \fi
+  \begin{center}%
+}{
+  \end{center}%
+  \end{table}%
+  \ifFloat\else
+    \FloatBarrier
+  \fi
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\Table}[4]{%
+  \begin{TableEnvironment}%
+    \refstepcounter{table}
+    \addcontentsline{lot}{section}{TABLE \thetable{}~~~#1}
+    \label{tab:#4}%
+    TABLE \thetable{}\\[1ex]
+    \settowidth{\TempFigureLength}{\textsc{#1}}
+    \ifdim \TempFigureLength > 0.95\columnwidth
+      \parbox{0.95\columnwidth}{\textsc{#1}}%
+    \else
+      \textsc{#1}%
+    \fi\\[1em]
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{#2}
+      #3
+    \end{tabular}
+  \end{TableEnvironment}%
+}
+%-------------------------------------------------------------------------------

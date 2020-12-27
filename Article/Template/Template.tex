@@ -1,0 +1,38 @@
+\newif\ifArticle\Articletrue
+\newif\ifTwoColumn
+\ifFormal
+  \TwoColumntrue
+\else
+  \TwoColumnfalse
+\fi
+%-------------------------------------------------------------------------------
+
+\ifFormal
+  \documentclass[conference]{IEEEtran}
+\else
+  \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{article}
+\fi
+\bibliographystyle{IEEEtran}
+%-------------------------------------------------------------------------------
+
+\ifFormal\else
+  % Widen the text area
+  \usepackage{a4wide}
+  
+  % Use "blocky" paragraphs
+  \setlength{\parskip}{1em}
+  \setlength{\parindent}{0mm}
+
+  \pagestyle{plain}
+\fi
+%-------------------------------------------------------------------------------
+
+\input{../Template/Packages}
+\input{../Template/Macros}
+\ifFormal\else
+  \input{../Template/TitlePage}
+\fi
+\input{../Template/TablesAndFigures}
+\input{../Template/Listings}
+\input{../Template/HyperRef}
+%-------------------------------------------------------------------------------

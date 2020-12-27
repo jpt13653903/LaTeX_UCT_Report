@@ -1,0 +1,293 @@
+\usepackage{listings}
+\lstloadlanguages{C, C++, Matlab, Verilog, VHDL, Python, TCL}
+%-------------------------------------------------------------------------------
+
+\definecolor{keyword}{rgb}{0.5, 0.0, 0.0}
+\definecolor{comment}{rgb}{0.0, 0.5, 0.0}
+\definecolor{string} {rgb}{0.0, 0.0, 0.7}
+\definecolor{define} {rgb}{1.0, 0.5, 0.0}
+\definecolor{string2}{rgb}{0.5, 0.0, 0.5}
+%-------------------------------------------------------------------------------
+
+\ifArticle
+  \lstset{%
+    basicstyle = \tiny\ttfamily,%
+    basewidth  = 1.3ex%
+  }
+\else
+  \lstset{%
+    basicstyle = \scriptsize\ttfamily,%
+    basewidth  = 1.2ex%
+  }
+\fi
+\lstset{%
+  frame            = single,%
+  upquote          = true,%
+  showstringspaces = false,%
+  keywordstyle     = [1]{\color{keyword}\slshape},%
+  keywordstyle     = [2]{\color{keyword}\bfseries},%
+  commentstyle     =    {\color{comment}},%
+  stringstyle      =    {\color{string}}
+}
+%-------------------------------------------------------------------------------
+
+\ifArticle
+  \newcounter{Listing}
+  \renewcommand{\theListing}{\arabic{Listing}}
+\else
+  \newcounter{Listing}[chapter]
+  \renewcommand{\theListing}{\arabic{chapter}.\arabic{Listing}}
+\fi
+
+\newlength{\CodeWidth}
+
+\newcommand{\StartListing}[2]{
+  \setlength{\CodeWidth}{0.95\columnwidth}
+  \ifFloat
+    \figure[!t]
+  \else
+    \figure[!htbp]
+  \fi
+  \refstepcounter{Listing}
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Listing \theListing{}}~#1}
+  \label{lst:#2}
+  \def\ListingCaption{#1}
+  \noindent\centering\minipage{\CodeWidth}%
+}
+\newcommand{\EndListing}{
+  \endminipage\\%
+  {%
+    \footnotesize%
+    \settowidth{\TempFigureLength}{Listing~\theListing{}.~~\ListingCaption}%
+    \ifdim \TempFigureLength > 0.95\columnwidth%
+      \parbox{0.95\columnwidth}{Listing~\theListing{}.~~\ListingCaption}%
+    \else%
+      Listing~\theListing{}.~~\ListingCaption%
+    \fi%
+  }%
+  \endfigure%
+  \ifFloat\else
+    \FloatBarrier
+  \fi
+}
+
+\newcommand{\StartListingInline}{%
+  \setlength{\CodeWidth}{0.95\columnwidth}%
+  \noindent\centering\minipage{\CodeWidth}%
+}
+\newcommand{\EndListingInline}{\endminipage\par}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupMatlab}{
+  \lstset{%
+    language    = Matlab,%
+    morecomment = [l][\color{comment}]{\#}%
+  }%
+}
+
+\lstnewenvironment{Matlab_float}[2]{
+  \SetupMatlab
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{Matlab}{
+  \SetupMatlab
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupGLSL}{
+  \lstset{%
+    language     = C,%
+    morecomment  = [l][\color{define}]{\#},%
+    morekeywords = {%
+      in,%
+      out,%
+      vec2,%
+      vec3,%
+      vec4,%
+      sin,%
+      length,%
+      texture2D,%
+      sampler2D,%
+      gl_FragColor,%
+      varying,%
+      uniform,%
+      discard%
+    }%
+  }%
+}
+
+\lstnewenvironment{GLSL_float}[2]{
+  \SetupGLSL
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{GLSL}{
+  \SetupGLSL
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupOpenCL}{
+  \lstset{%
+    language     = C,%
+    morecomment  = [l][\color{define}]{\#},%
+    morekeywords = {%
+      __kernel,%
+      __global,%
+      __local,%
+      get_global_id%
+    }%
+  }%
+}
+
+\lstnewenvironment{OpenCL_float}[2]{
+  \SetupOpenCL
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{OpenCL}{
+  \SetupOpenCL
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupVerilog}{
+  \lstset{%
+    language    = Verilog,%
+    morecomment = [l][\color{define}]{`}%
+  }%
+}
+
+\lstnewenvironment{Verilog_float}[2]{
+  \SetupVerilog
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{Verilog}{
+  \SetupVerilog
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupVHDL}{
+  \lstset{%
+    language     = VHDL,%
+    morekeywords = [1]{ % Keywords and Functions
+      to_unsigned, to_signed, to_integer, to_std_logic_vector, now, resize, work, length, left, right, low, high, stable, delayed, image, value, rising_edge, falling_edge%
+    },%
+    morekeywords = [2]{ % Types
+      std_logic, std_logic_vector, unsigned, signed, integer, time, string%
+    }%
+  }%
+}
+
+\lstnewenvironment{VHDL_float}[2]{
+  \SetupVHDL
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{VHDL}{
+  \SetupVHDL
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupTCL}{
+  \lstset{%
+    language     = TCL,%
+    morecomment  = [l][\color{comment}]{\#},%
+    morekeywords = {%
+      create_clock,%
+      get_ports,%
+      get_registers,%
+      derive_pll_clocks,%
+      derive_clock_uncertainty,%
+      set_output_delay,%
+      set_input_delay,%
+      set_multicycle_path,%
+      set_global_assignment,%
+      set_instance_assignment,%
+      set_location_assignment%
+    }%
+  }%
+}
+
+\lstnewenvironment{TCL_float}[2]{
+  \SetupTCL
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{TCL}{
+  \SetupTCL
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupPython}{
+  \lstset{%
+    language = Python%
+  }%
+}
+
+\lstnewenvironment{Python_float}[2]{
+  \SetupPython
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{Python}{
+  \SetupPython
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupCpp}{
+  \lstset{%
+    language    = C++,
+    morecomment = [l][\color{define}]{\#}%
+  }%
+}
+
+\lstnewenvironment{Cpp_float}[2]{
+  \SetupCpp
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{Cpp}{
+  \SetupCpp
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------

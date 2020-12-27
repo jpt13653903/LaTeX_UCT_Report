@@ -1,0 +1,127 @@
+\newcommand{\Sp}[1]{%
+ {\scriptsize\raisebox{0.9ex}{#1}}%
+}
+\newcommand{\Sb}[1]{%
+ {\scriptsize\raisebox{-0.6ex}{#1}}%
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\inch}{$''$}
+\newcommand{\IIC} {I\Sp{2}C}
+
+\newcommand{\etal}       {\emph{et~al.}}
+\newcommand{\ie}         {i.e.}
+\newcommand{\bookcite}[2]{\cite{#1}~pg.~#2}
+%-------------------------------------------------------------------------------
+
+\newcounter{author}
+\renewcommand{\theauthor}{\stepcounter{author}\raisebox{1ex}{\small\fnsymbol{author}}}
+%-------------------------------------------------------------------------------
+
+\renewcommand{\today}{%
+  \number\day\space%
+  \ifcase\month%
+    \or January%
+    \or February%
+    \or March%
+    \or April%
+    \or May%
+    \or June%
+    \or July%
+    \or August%
+    \or September%
+    \or October%
+    \or November%
+    \or December%
+  \fi%
+  \space\number\year%
+}
+%-------------------------------------------------------------------------------
+
+\ifArticle\else
+  \newenvironment{abstract}{
+    \thispagestyle{empty}
+    \ifFormal
+      \chapter*{Abstract}
+    \else
+      \mbox{}\vfill
+      \centering\textbf{\Large Abstract}\par\vspace{7mm}
+    \fi
+    \minipage{0.8\textwidth}
+    \setlength{\parskip}{1em}
+  }{
+    \endminipage
+    \ifFormal\else
+      \vfill\vfill
+      \clearpage
+    \fi
+  }
+\fi
+%-------------------------------------------------------------------------------
+
+\newenvironment{List}{\setlength{\parindent}{0em}\setlength{\parskip}{0.3em}}{}
+
+\newcommand{\abbrhead}[1]{\vspace{1.5ex}\pdfbookmark[2]{#1}{abbrhead:#1}}
+\newcommand{\abbr}[2]{\hspace{5mm}\makebox[25.4mm]{#1\dotfill}#2\par}
+
+\newcommand{\definition}[2]{
+  {\bfseries #1}
+  \hfill
+  \begin{minipage}[t]{100mm}
+    \setlength{\parindent}{0em}
+    \setlength{\parskip}  {1em}
+    #2\par
+  \end{minipage}\par
+}
+%-------------------------------------------------------------------------------
+
+\newlength{\HypothesisLabelWidth}
+\settowidth{\HypothesisLabelWidth}{\textbf{Hypothesis~H99:~}}
+
+\newlength{\HypothesisBodyWidth}
+
+\newcounter{Hypothesis}
+\setcounter{Hypothesis}{-1}
+\renewcommand{\theHypothesis}{H\arabic{Hypothesis}}
+
+\ifTwoColumn
+  \setlength{\HypothesisBodyWidth}{0.9\columnwidth}%
+
+  \newcommand{\Hypothesis}[2]{%
+    \vspace{1em}
+    \refstepcounter{Hypothesis}%
+    \label{hyp:#1}%
+    \textbf{Hypothesis~\theHypothesis:}\\
+    \mbox{}\hfill
+    \begin{minipage}[t]{\HypothesisBodyWidth}%
+      #2\par%
+    \end{minipage}
+    \vspace{1em}
+  }
+\else
+  \setlength  {\HypothesisBodyWidth}{0.85\textwidth}%
+  \addtolength{\HypothesisBodyWidth}{-\HypothesisLabelWidth}
+
+  \newcommand{\Hypothesis}[2]{%
+    \refstepcounter{Hypothesis}%
+    \label{hyp:#1}%
+    \hspace{0.05\textwidth}
+    \makebox[\HypothesisLabelWidth][l]{\textbf{Hypothesis~\theHypothesis:}}%
+    \begin{minipage}[t]{\HypothesisBodyWidth}%
+      #2\par%
+    \end{minipage}
+    \vspace{1em}
+  }
+\fi
+%-------------------------------------------------------------------------------
+
+\definecolor{Old}     {rgb}{0.7, 0.7, 0.8}
+\definecolor{Note}    {rgb}{0.0, 0.5, 0.0}
+\definecolor{Todo}    {rgb}{1.0, 0.0, 0.0}
+\definecolor{Rephrase}{rgb}{0.5, 0.0, 1.0}
+
+\newcommand{\old}     [1]{\ifDraft{\color{Old}               #1}\fi}
+\newcommand{\note}    [1]{\ifDraft{\color{Note}    \slshape  #1}\fi}
+\newcommand{\todo}    [1]{\ifDraft{\color{Todo}    \bfseries #1}\fi}
+\newcommand{\rephrase}[1]{\ifDraft{\color{Rephrase}\slshape  #1}\else{#1}\fi}
+%-------------------------------------------------------------------------------

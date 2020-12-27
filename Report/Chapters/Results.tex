@@ -1,0 +1,107 @@
+\Chapter{Results}
+
+The results section is for presenting and discussing your findings.  You can split it into subsections if the experiment has multiple sections or stages.
+
+\section{Figures}
+
+Include good quality graphs (see Fig.~\ref{fig:r_vs_N_f=0_0005_P=90}).  These were produced by the Octave code presented in listings~\ref{lst:FormatFig} and~\ref{lst:PlotExample}.  You can play around with the \texttt{PaperSize} and \texttt{PaperPosition} variables to change the aspect ratio.  An easy way to obtain more space on a paper is to use wide, flat figures, such as Fig.~\ref{fig:Line_Signals}.
+
+\Figure[width=0.8\columnwidth]{The correlation coefficient as a function of sample count.}{r_vs_N_f=0_0005_P=90}
+
+\begin{Matlab_float}{Octave function to format a figure and save it to a high quality PDF graph}{FormatFig}
+  function FormatFig(X, Y, File);
+    set(gcf, 'PaperUnits'      , 'inches');
+    set(gcf, 'PaperOrientation', 'landscape');
+    set(gcf, 'PaperSize'       ,       [8, 4]);
+    set(gcf, 'PaperPosition'   , [0, 0, 8, 4]);
+   
+    set(gca, 'FontName', 'Times New Roman');
+    set(gca, 'Position', [0.1 0.2 0.85 0.75]);
+   
+    xlabel(["\n" X]);
+    ylabel([Y "\n\n"]);
+   
+    setenv("GSC", "GSC"); # Eliminates stupid warning
+    print(...
+      [File '.pdf'],...
+      '-dpdf'...
+    );
+  end
+\end{Matlab_float}
+
+\begin{Matlab_float}{Example of how to use the FormatFig function}{PlotExample}
+  figure;                                   # Create a new figure
+  # Some code to calculate the various variables to plot...
+  plot(N, r, 'k', 'linewidth', 4); grid on; # Plot the data
+  xlim([0 360]);                            # Limit the x range
+  ylim([-1 1]);                             # Limit the y range
+  set(gca, 'xtick', [0 90 180 270 360]);    # Set the x labels
+
+  FormatFig(...                             # Call the function with:
+    'Phase shift [\circ]',...                      # The x title
+    'Correlation coefficient',...                  # The y title
+    ['r_vs_N;_f=' num2str(f) ';_P=' num2str(P)]... # Format the file name
+  );
+  close all;                                # Close all open figures
+\end{Matlab_float}
+
+\Figure[width=0.8\columnwidth]{Oscilloscope measurement showing physical line signals on both ends of a transmission line during master switch-over~\cite{Taylor_2016}.}{Line_Signals}
+
+Always remember to include axes text, units and a meaningful caption in your graphs.  When typing units, a \micro{} sign has a tail!  The letter ``u'' is not a valid unit prefix.  When typing resistor values, use the \ohm{} symbol.
+
+\section{Tables}
+
+Tables are often a convenient means by which to specify lists of parameters.  An example table is presented in table~\ref{tab:Example}. You can use \href{https://www.tablesgenerator.com/}{Tablesgenerator} to make your \LaTeX\ tables.
+
+\Table{My Informative Table}{lcr}{ % This format specifies 3 columns with left, centre and right allignment
+  \hline
+  \hline
+  \textbf{Heading 1} & \textbf{Heading 2} & \textbf{Heading 3} \\
+  \hline
+  Data & 123 & 321 \\
+  Data & 456 & 654 \\
+  Data & 789 & 987 \\
+  \hline
+  \hline
+}{Example}
+
+\section{Pictures and Screen-shots}
+
+When you include screen-shots, pdf\LaTeX{} supports JPG and PNG file formats.  PNG is preferred for screen-shots, as it is a loss-less format.  JPG is preferred for photos, as it results in a smaller file size.  It's generally a good idea to resize photos (not screen-shots) to be no more that 300~dpi, in order to reduce file size.  For 2-column article format papers, this translates to a maximum width of 1024.  \textbf{Never change the aspect ratio of screen-shots and pictures!}
+
+It is highly recommended to make use of the \verb|\Figure| macro for figures.  It puts all the formatting tweaks in one place, so that you don't need to update all the individual figure inclusion points when you want to do a styling update.  The file name is used for the \LaTeX\ label, such as ``Fig.~\ref{fig:UCT.pdf}''.
+
+\Figure[width=0.6\columnwidth]{An example image with custom scaling}{UCT.pdf}
+
+Make sure to always use the best quality image possible.  Use JPEG for photos, PNG for screen-shots and PDF (scalable vector graphics) for everything else.  JPEG is lossy, but good for photos, whereas PNG is lossless and good for images with large areas of solid colour, as can be seen in Fig.~\ref{fig:FigureQuality}.
+
+\begin{FigureEnvironment}{Comparison of various image format qualities}%
+  \label{fig:FigureQuality}%
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}\centering\setlength{\parindent}{0mm}
+    \includegraphics[width=\textwidth]{../Figures/UCT.jpg}\\%
+    {\small (a)~~JPEG}%
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}\centering\setlength{\parindent}{0mm}
+    \includegraphics[width=\textwidth]{../Figures/UCT.png}\\%
+    {\small (b)~~PNG}%
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.3\textwidth}\centering\setlength{\parindent}{0mm}
+    \includegraphics[width=\textwidth]{../Figures/UCT.pdf}\\%
+    {\small (c)~~SVG}%
+  \end{minipage}
+  \hfill\mbox{}\\[1mm]
+\end{FigureEnvironment}%
+
+\section{Maths}
+
+\LaTeX{} has a very sophisticated maths rendering engine, as illustrated by equation~\ref{eq:Example}.  When talking about approximate answers, never use $\pm{54}$~V, as this implies ``positive or negative~54~V''.  Use $\approx{54}$~V or $\sim{54}$~V instead.
+
+\begin{equation}
+  y = \int_0^\infty e^{x^2} \mathrm{dx}
+  \label{eq:Example}
+\end{equation}
+
+
