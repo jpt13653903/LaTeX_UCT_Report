@@ -1,32 +1,6 @@
-\newif\ifArticle\Articletrue
-\newif\ifTwoColumn
-\ifFormal
-  \TwoColumntrue
-\else
-  \TwoColumnfalse
-\fi
-%-------------------------------------------------------------------------------
-
-\ifFormal
-  \documentclass[conference]{IEEEtran}
-\else
-  \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{article}
-\fi
-\bibliographystyle{IEEEtran}
-%-------------------------------------------------------------------------------
-
-\ifFormal\else
-  % Widen the text area
-  \usepackage{a4wide}
-  
-  % Use "blocky" paragraphs
-  \setlength{\parskip}{1em}
-  \setlength{\parindent}{0mm}
-
-  \pagestyle{plain}
-\fi
-%-------------------------------------------------------------------------------
-
+% This indirection makes it possible for other repositories to pull this 
+% template repo in as a submodule and then "input" the template directly
+\input{../Template/Article}
 \input{../Template/Packages}
 \input{../Template/Macros}
 \ifFormal\else
