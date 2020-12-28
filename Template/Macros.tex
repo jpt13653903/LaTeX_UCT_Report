@@ -125,3 +125,34 @@
 \newcommand{\todo}    [1]{\ifDraft{\color{Todo}    \bfseries #1}\fi}
 \newcommand{\rephrase}[1]{\ifDraft{\color{Rephrase}\slshape  #1}\else{#1}\fi}
 %-------------------------------------------------------------------------------
+
+\newcommand{\Card}[2]{{
+  \ifTwoColumn
+    \setlength{\fboxsep}{1.5mm}
+  \else
+    \setlength{\fboxsep}{2.5mm}
+  \fi
+  \centering
+  \framebox{
+    \begin{minipage}[t]{0.93\columnwidth}
+      #1\par
+      \mbox{}\hfill
+      \begin{minipage}[t]{0.95\textwidth}
+        \setlength{\parindent}{0mm}
+        \setlength{\parskip}{0.5em}
+        #2\par
+      \end{minipage}
+    \end{minipage}
+  }\par
+}}
+\newcommand{\notecard}[1]{
+  \ifDraft
+    \Card{\note{NOTE}}{#1}
+  \fi
+}
+\newcommand{\todocard}[1]{
+  \ifDraft
+    \Card{\todo{TODO}}{#1}
+  \fi
+}
+%-------------------------------------------------------------------------------

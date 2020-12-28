@@ -15,8 +15,21 @@ txs:///view-pdf-internal
 \end{verbatim}
 % \linebreak stretches the line that is broken to the end of the column.  Use "\\" or "\newline" if you don't want it to do this.
 
-\section{Drafting Markup}
+\subsection{Drafting Markup}
 
 When the template is in draft mode, you can use various helper macros, as illustrated below:
 
 \old{This is old text that should be removed.}  \note{This is a note about something to remember, or comments from the proof-reader.}  \todo{This is something that still needs doing.}  When compiled with \verb|\Draftfalse|, the content of these macros are removed from the output, \rephrase{except something that needs to be rephrased.}
+
+\note{You can also use cards, as follows:}
+
+\todocard{
+  This is a todo card.
+  
+  It is a minipage environment, so you can have all sorts of stuff in it.  It can be many paragraphs long, but don't make it too long, because \LaTeX\ will force the whole card onto a single page.
+}
+\notecard{
+  This is a note card.
+  
+  It is a minipage environment, so you can have all sorts of stuff in it.  It can be many paragraphs long, but don't make it too long, because \LaTeX\ will force the whole card onto a single page.
+}
