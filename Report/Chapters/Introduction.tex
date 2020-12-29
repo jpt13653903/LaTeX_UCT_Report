@@ -1,5 +1,7 @@
 \Chapter{Introduction}
 
+\section{\color{red}Preamble Concerning Use of Latex}
+
 If you are new to \LaTeX{}, I would suggest reading~\cite{Oetiker_2015}.  If you want to use Microsoft Word (or one of its many clones), you can download the official IEEE conference template from~\cite{Word_Template}.  The TA and tutors can provide \LaTeX{} support.  Use Word at your own risk.
 
 The introduction is where you set the scene.  Here you reference other, related work, as well as a summary relating to how you improve upon said work~\cite{BibExample}.  In the sense of the practical reports, the introduction will summarise the experiment the practical is all about.
@@ -16,7 +18,9 @@ txs:///view-pdf-internal
 % \linebreak stretches the line that is broken to the end of the column.  Use "\\" or "\newline" if you don't want it to do this.
 
 \clearpage
-\section{Drafting Markup}
+
+\section{\color{red}Drafting Markup}
+% I put in the above and commented out the section because I wanted to use the section numbers for the structure suggestion
 
 When the template is in draft mode, you can use various helper macros, as illustrated below:
 
@@ -31,3 +35,41 @@ When the template is in draft mode, you can use various helper macros, as illust
 
   \notecard{This is a nested note card.  You can nest cards of arbitrary types as deep as you like.}
 }
+
+\section{Introduction Advice}
+
+% this section provides some advice about writing the introduction
+
+\textbf{Introduction Funnel - a general guide}
+
+The introduction, and especially the first paragraph, is a key part of your thesis or dissertation.  First impressions matter! This comment goes together with the abstract, but in a way the start of the introduction is in a may setting an even more important first impression (as examiners know that an abstract is often a short piece that is highly polished and possibly not entirely representative of the quality that will appear later.)
+
+You want to start off with a "fantastic opening paragraph" and the lead-in to the topic (I call this the "once upon a time" part of the thesis, which is setting the scene for your 'story'... I mean study). I suggest the use of the "funnel approach" that is illustrated below. 
+
+For introducing your dissertation, you essentially want to start broad and then focus in, getting to the main point of the focus. When you've got all the way to the scope, which explains some of the lower level details of e.g. specific context(s) of focus or aspects of exclusion, then one can transition (on something of a new tack) to explaining the outline of the dissertation, what chapters will follow and a brief summary of these, but without giving too much interesting points and findings away in these summaries of the chapters. 
+
+
+
+\begin{lstlisting}
+-----------------------
+\ (start on Ch1 Into) /
+ \    Background     /
+ |      Terms       |  (optional)
+ \  Problem Desc   /  (general problem -- may want to jump into objectives)
+  \   Objective   /
+   \  Spec Probs /    (specific problems to study)
+    \ Questions /     (this is the research question you need to answer)
+     \   ToR   /      (i.e. Terms of reference, requirements, function, getting very specific)
+      \ Scope /       (discussing details of specific nitty gritty focus, things to leave out etc)
+       | DiP |        (DIssemination Plan; optional - but highly recommended)
+        -----         (you kind of close off with the disemination plan, which is ulitimately 
+        |   |         the delivery of your work to the wider audience)
+        -----
+       /     \        Then you can go on with (a somewhat different theme)
+      /       \       that is the structure of the thesis
+     / Overview\
+    / of Thesis \
+   /             \
+   |(end of Intro)|
+   ----------------
+\end{lstlisting}

@@ -1,58 +1,15 @@
 \Chapter{Methodology}
 
-In this section you should describe the method of the experiment.
+In this section you should describe the method followed in your research project, which for an engineering case is typically the development and experimentation of the system that is developed to solve a problem together with how testing of the system was carried out to show that it indeed solved the problem or at least to what extent it solved the problem (note that, yes, unfortunately it is sometimes not possible to provide an effective solution -- it may be too expensive or take to long to solve properly -- but even then it can still be considered a contribution of knowledge and still have some value as a research investigation.).
 
-\section{Hardware}
-
-Include detail such as the hardware used.  It's generally a good idea to include a block diagram at this point, such as the one presented in Fig.~\ref{fig:RS-232_Test}.  This figure was drawn in \href{http://www.inkscape.org/}{InkScape}~\cite{InkScape}.  When you want to import an InkScape figure (SVG format) into \LaTeX{}, simply save it to PDF (use the drawing extents as the media box area) and include the figure.
-
-\Figure[scale=1.2]{Test setup used to test the implementation~\cite{Taylor_2016}.}{RS-232_Test}
-
-\section{Implementation}
-
-Also mention the implementation source code:
-
-\begin{Matlab}
-  # You can include inline Matlab / Octave code
-  x = linspace(0, 2*pi, 1000);
-  y = sin(x);
-  plot(x, y); grid on;
-\end{Matlab}
-
-Or you could turn it into a float: see listing~\ref{lst:OpenCL_Matrix_Mult}.  Floats are tables, figures and listings that appear at a different place than in the source code.  This template is set up to put floats at the top of the next column, as prescribed by the IEEE article specification.
-
-\begin{OpenCL_float}{OpenCL kernel to perform matrix multiplication}{OpenCL_Matrix_Mult}
-  __kernel void Multiply(
-    __global float* A, // Global input buffer
-    __global float* B, // Global input buffer
-    __global float* Y, // Global output buffer
-      const  int    N  // Global uniform
-  ){
-    const int i = get_global_id(0); // 1st dimension index
-    const int j = get_global_id(1); // 2nd dimension index
-   
-    // Private variables
-    int   k;
-    float f = 0.0;
-   
-    // Kernel body
-    for(k = 0; k < N; k++) f += A[i*N + k] * B[k*N + j];
-    Y[i*N + j] = f;
-  }
-\end{OpenCL_float}
-
-Only list what is relevant.  Don't give too much detail - just enough to show what you've done.  This template supports the following languages:
+\textbf{Methodology vs Design:} A vitally important terminology consideration is to realize that  methodology is not the same as design. This is a common confusion amongst students who have not done a research project or written a thesis before. This short explanation should suffice to ensure you understand the difference:
 
 \begin{itemize}
-  \item Matlab (Octave)
-  \item GLSL
-  \item OpenCL
-  \item Verilog
-  \item VHDL
-  \item TCL
-  \item Python
-  \item C++ (use the name `Cpp')
+	\item Methodology: this describes how you are going to go about doing the research project. It describes the main high-level steps (or phases) of the project. It does not detail design or pieces of your design. You should not need any block diagrams in the design.
+	\item Design: this is what you have built (or are going to build). It includes diagrams, system block diagram, flow charts, pseudocode/algorithms, schematics, etc. Generally, in a computing-related project, it will end off with implementation details (actual code snippets). These implementation details, depending on how much there are of them, may be better placed in a separate Implementation chapter. Similarly, you might decide to have a separate Integration chapter if there are a lot of pieces that takes quite a bit of explaining and diagrams to describe how they connect and work together. 
 \end{itemize}
+
+
 
 \section{Experiment Procedure}
 
