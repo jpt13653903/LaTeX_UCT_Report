@@ -35,7 +35,11 @@
   \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
-      \vspace*{-20mm}
+      \ifDraft
+        \vspace*{-30mm}
+      \else
+        \vspace*{-20mm}
+      \fi
       \ifFormal
         % Modify the line below to insert your title.
         {\Huge \@title}
@@ -97,9 +101,9 @@
           \end{flushright}
         \end{minipage}\\[2 cm]
       
-        {\large \@date}\\[2 cm]
-      
         \vfill\vfill
+
+        {\large \@date}\\[2 cm]
       \fi
     \end{center}
     \clearpage

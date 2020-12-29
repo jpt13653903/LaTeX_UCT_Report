@@ -23,10 +23,16 @@ output generated with all possible option flags.
 
 ## Usage Instructions
 
-### Forking the Repository
+There are two intended use cases:
 
-The intended use is to fork the repository.  This way, any updates to this 
-template repository can be merged into your repository, and vice versa.
+1. Include the repository as a Git submodule and `\input` the contents of the 
+   `Template` folder directly.  In this case, copy the `Report` or `Article`, 
+   as well as the `Figures` and `Bibliography` folders, to an appropriate 
+   place in the parent repository, correct the paths of the `\input` commands 
+   and you're all set.
+1. Fork the repository and edit the examples directly.
+
+In both cases it is relatively easy to keep both sides up to date.
 
 ### Configuring the Flags
 

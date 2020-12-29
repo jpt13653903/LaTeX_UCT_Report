@@ -10,7 +10,11 @@
 \ifFormal
   \documentclass[conference]{IEEEtran}
 \else
-  \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{article}
+  \ifDraft
+    \documentclass[onecolumn, a4paper, 12pt, titlepage, fleqn, oneside]{article}
+  \else
+    \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{article}
+  \fi
 \fi
 \bibliographystyle{IEEEtran}
 %-------------------------------------------------------------------------------

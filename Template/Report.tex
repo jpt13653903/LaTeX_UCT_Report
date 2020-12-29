@@ -2,10 +2,14 @@
 \newif\ifTwoColumn\TwoColumnfalse
 %-------------------------------------------------------------------------------
 
-\ifFormal
-  \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn]{book}
+\ifDraft
+  \documentclass[onecolumn, a4paper, 12pt, titlepage, fleqn, oneside]{book}
 \else
-  \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{book}
+  \ifFormal
+    \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn]{book}
+  \else
+    \documentclass[onecolumn, a4paper, 11pt, titlepage, fleqn, oneside]{book}
+  \fi
 \fi
 \bibliographystyle{IEEEtran}
 %-------------------------------------------------------------------------------
