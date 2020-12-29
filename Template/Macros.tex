@@ -63,11 +63,20 @@
 
 \newcommand{\abbrhead}[1]{\vspace{1.5ex}\pdfbookmark[2]{#1}{abbrhead:#1}}
 \newcommand{\abbr}[2]{\hspace{5mm}\makebox[25.4mm]{#1\dotfill}#2\par}
+%-------------------------------------------------------------------------------
+
+% Set the width to the longest entry -- update as required
+\newlength{\DefinitionEntryWidth}
+\settowidth{\DefinitionEntryWidth}{\textbf{Translation Unit~~}}
+
+\newlength{\DefinitionBodyWidth}
+\setlength{\DefinitionBodyWidth}{\textwidth}
+\addtolength{\DefinitionBodyWidth}{-\DefinitionEntryWidth}
 
 \newcommand{\definition}[2]{
   {\bfseries #1}
   \hfill
-  \begin{minipage}[t]{100mm}
+  \begin{minipage}[t]{\DefinitionBodyWidth}
     \setlength{\parindent}{0em}
     \setlength{\parskip}  {1em}
     #2\par
