@@ -2,6 +2,12 @@
 
 LaTeX template useful for UCT reports and formal dissertations
 
+# LaTeX UCT Report
+
+LaTeX template useful for UCT reports (lab reports or BSc final year project reports) and formal Masters or Doctoral dissertations.
+
+''Disclaimer note:'' these resources are based around what has been used in the Department of Electrical Engineering at UCT; different departments or research units may have their own approaches and expectations of what is needed and how to prepare technical documents of this nature, you are thus advised to ensure your work is aligned to what is needed for your context -- we are providing this resources as use-at-own-risk contributions (see license details link below).
+
 ## Dependencies
 
 This template compiles using pdfLaTeX.  For the `make figures` target to also 
