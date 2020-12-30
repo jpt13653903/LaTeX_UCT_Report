@@ -139,6 +139,33 @@
 }
 %-------------------------------------------------------------------------------
 
+\newlength{\TestTableDescriptionWidth}
+\setlength{\TestTableDescriptionWidth}{\columnwidth}
+\addtolength{\TestTableDescriptionWidth}{-15ex}
+
+\newcounter{TestNumber}
+\renewcommand{\theTestNumber}{T\arabic{TestNumber}}
+
+\newenvironment{TestTable}[2]{
+  \begin{TableEnvironment}{#1}{#2}
+  \setcounter{TestNumber}{0}
+  \newcommand{\Test}[4]{%
+    \refstepcounter{TestNumber}%
+    \label{test:##1}%
+    \theTestNumber & ##2 & ##3 & ##4 \\
+  }
+  \begin{tabular}{cp{\TestTableDescriptionWidth}cc}
+  \hline
+  \hline
+  \textbf{Test} & \textbf{Description} & \textbf{Func} & \textbf{Req} \\
+}{
+  \hline
+  \hline
+  \end{tabular}
+  \end{TableEnvironment}
+}
+%-------------------------------------------------------------------------------
+
 \definecolor{Old}     {rgb}{0.7, 0.7, 0.8}
 \definecolor{Note}    {rgb}{0.0, 0.5, 0.0}
 \definecolor{Todo}    {rgb}{1.0, 0.0, 0.0}
