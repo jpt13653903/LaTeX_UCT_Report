@@ -54,16 +54,26 @@
 \fi
 %-------------------------------------------------------------------------------
 
-\newcommand{\Chapter}[1]{%
- \chapter{#1}%
- \addcontentsline{lof}{chapter}{\thechapter{}~~#1}%
- \addcontentsline{lot}{chapter}{\thechapter{}~~#1}%
-}
-
 \makeatletter
-  \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                             {-3.25ex\@plus -1ex \@minus -.2ex}%
-                             {1.5ex \@plus .2ex}%
-                             {\refstepcounter{subsubsection}\normalfont\normalsize\bfseries\thesubsubsection~~~}}
+  \newcommand\Chapter[1]{%
+    \chapter{#1}%
+    \addcontentsline{lof}{chapter}{\thechapter{}~~#1}%
+    \addcontentsline{lot}{chapter}{\thechapter{}~~#1}%
+  }
+  \renewcommand\subsubsection{%
+    \@startsection{subsubsection}{3}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {%
+      \refstepcounter{subsubsection}%
+      \normalfont\normalsize\bfseries\thesubsubsection~~~% The default is numberless
+    }%
+  }
+  \renewcommand\subparagraph{%
+    \@startsection{subparagraph}{5}{\parindent}%
+    {3.25ex \@plus1ex \@minus .2ex}%
+    {-1em}%
+    {\normalfont\normalsize\slshape}% The default is \bfseries
+  }
 \makeatother
 %-------------------------------------------------------------------------------
