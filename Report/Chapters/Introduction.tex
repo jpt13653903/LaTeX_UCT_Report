@@ -31,3 +31,30 @@ When the template is in draft mode, you can use various helper macros, as illust
 
   \notecard{This is a nested note card.  You can nest cards of arbitrary types as deep as you like.}
 }
+
+\section{Template Commands}
+
+\subsection{Requirement and Function Lists}
+
+Here follows an example of requirement and function lists.  You can refer to the items as req.~\ref{req:MyFirstRequirement} to req.~\ref{req:MyLastRequirement}; and function~\ref{func:MyFirstFunction} to function~\ref{func:MyLastFunction}.  These lists can also be nested, as in req.~\ref{req:MyNestedRequirement}.
+
+\begin{SpecList}{R}
+  \item The first requirement described\label{req:MyFirstRequirement}
+  \item The second requirement described
+  \item So on\label{req:MyLastRequirement}
+  \begin{enumerate}
+    \item And they can be nested...
+    \begin{enumerate}
+      \item And more nested...
+      \begin{enumerate}
+        \item And even more nested.
+      \end{enumerate}
+    \end{enumerate}
+  \end{enumerate}
+\end{SpecList}
+
+\begin{SpecList}{F}
+  \item The first function described\label{func:MyFirstFunction}
+  \item The second function described
+  \item So on\label{func:MyLastFunction}
+\end{SpecList}

@@ -124,6 +124,21 @@
 \fi
 %-------------------------------------------------------------------------------
 
+\newenvironment{SpecList}[1]{%
+  \begin{enumerate}%
+    \def\theenumi    {#1\arabic{enumi}}%
+    \def\theenumii   {\theenumi.\arabic{enumii}}%
+    \def\theenumiii  {\theenumii.\arabic{enumiii}}%
+    \def\theenumiv   {\theenumiii.\arabic{enumiv}}%
+    \def\labelenumi  {\theenumi.}
+    \def\labelenumii {\theenumii}
+    \def\labelenumiii{\theenumiii}
+    \def\labelenumiv {\theenumiv}
+}{%
+  \end{enumerate}%
+}
+%-------------------------------------------------------------------------------
+
 \definecolor{Old}     {rgb}{0.7, 0.7, 0.8}
 \definecolor{Note}    {rgb}{0.0, 0.5, 0.0}
 \definecolor{Todo}    {rgb}{1.0, 0.0, 0.0}
