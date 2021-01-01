@@ -44,13 +44,24 @@
 }
 %-------------------------------------------------------------------------------
 
-\newenvironment{TableEnvironment}{
+\newenvironment{TableEnvironment}[2]{
   \ifFloat
     \begin{table}[!t]%
   \else
     \begin{table}[!htbp]%
   \fi
   \begin{center}%
+  \refstepcounter{table}
+  \addcontentsline{lot}{section}{TABLE \thetable{}~~~#1}
+  \label{tab:#2}%
+  TABLE \thetable{}\\[1ex]
+  \settowidth{\TempFigureLength}{\textsc{#1}}
+  \ifdim \TempFigureLength > 0.95\columnwidth
+    \parbox{0.95\columnwidth}{\textsc{#1}}%
+  \else
+    \textsc{#1}%
+  \fi\\[1em]
+  \renewcommand{\arraystretch}{1.2}
 }{
   \end{center}%
   \end{table}%
@@ -61,18 +72,7 @@
 %-------------------------------------------------------------------------------
 
 \newcommand{\Table}[4]{%
-  \begin{TableEnvironment}%
-    \refstepcounter{table}
-    \addcontentsline{lot}{section}{TABLE \thetable{}~~~#1}
-    \label{tab:#4}%
-    TABLE \thetable{}\\[1ex]
-    \settowidth{\TempFigureLength}{\textsc{#1}}
-    \ifdim \TempFigureLength > 0.95\columnwidth
-      \parbox{0.95\columnwidth}{\textsc{#1}}%
-    \else
-      \textsc{#1}%
-    \fi\\[1em]
-    \renewcommand{\arraystretch}{1.2}
+  \begin{TableEnvironment}{#1}{#4}%
     \begin{tabular}{#2}
       #3
     \end{tabular}

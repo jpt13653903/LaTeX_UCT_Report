@@ -1,28 +1,25 @@
 \Chapter{Introduction}
+\label{Ch:Introduction}
 
-\section{\color{red}Preamble Concerning Use of Latex}
+\vspace{2em}{\Large\bfseries\color{red} Concerning Use of Latex}
 
-If you are new to \LaTeX{}, I would suggest reading~\cite{Oetiker_2015}.  If you want to use Microsoft Word (or one of its many clones), you can download the official IEEE conference template from~\cite{Word_Template}.  The TA and tutors can provide \LaTeX{} support.  Use Word at your own risk.
+If you are new to \LaTeX{}, I would suggest reading~\cite{Oetiker_2015}.  The TA and tutors can provide \LaTeX\ support.
 
-The introduction is where you set the scene.  Here you reference other, related work, as well as a summary relating to how you improve upon said work~\cite{BibExample}.  In the sense of the practical reports, the introduction will summarise the experiment the practical is all about.
+Remember that, for bibliography citations to work, you have to include running Bib\TeX{} in the compile chain.  You can, for instance, use TeXstudio~\cite{TeXstudio} with a compile chain for ``Build \& View'' set up as follows:
 
-As a general rule of thumb, keep the introduction to the first column and don't put any \mbox{sub-sections} into it.
-
-Remember that, for bibliography citations to work, you have to include running Bib\TeX{} in the compile chain.  My TeXstudio~\cite{TeXstudio} compile chain for ``Build \& View'' is\linebreak
-\vspace{-6mm}
 \begin{verbatim}
-txs:///bibtex | txs:///pdflatex |
-txs:///bibtex | txs:///pdflatex |
-txs:///view-pdf-internal
+    txs:///bibtex | txs:///pdflatex |
+    txs:///bibtex | txs:///pdflatex |
+    txs:///view-pdf-internal
 \end{verbatim}
-% \linebreak stretches the line that is broken to the end of the column.  Use "\\" or "\newline" if you don't want it to do this.
 
-\clearpage
+Similar options exist for TeXmaker, VS~Code and other IDEs.
 
-\section{\color{red}Drafting Markup}
-% I put in the above and commented out the section because I wanted to use the section numbers for the structure suggestion
+\vspace{2em}{\Large\bfseries\color{red} Template Features}
 
-When the template is in draft mode, you can use various helper macros, as illustrated below:
+This template defines various macros aimed at assisting the author in writing consistently styled documents.  You are encouraged to make use of these instead of the more low-level \LaTeX\ commands.
+
+Examples of how to use most of these macros are included throughout this example document.  One not mentioned, however, is drafting markup.  When the template is in draft mode, you can use various helper macros, as illustrated below:
 
 \old{This is old text that should be removed.}  \note{This is a note about something to remember, or comments from the proof-reader.}  \todo{This is something that still needs doing.}  When compiled with \verb|\Draftfalse|, the content of these macros are removed from the output, \rephrase{except something that needs to be rephrased.}
 
@@ -36,193 +33,213 @@ When the template is in draft mode, you can use various helper macros, as illust
   \notecard{This is a nested note card.  You can nest cards of arbitrary types as deep as you like.}
 }
 
-\section{Introduction Advice}
+\vspace{2em}{\Large\bfseries\color{red} Introduction Funnel -- A General Guide}
 
-% this section provides some advice about writing the introduction
+The introduction, and especially the first paragraph, is a key part of your thesis or dissertation.  First impressions matter!  This comment goes together with the abstract, but in a way the start of the introduction is setting an even more important first impression (as examiners know that an abstract is often a short piece that is highly polished and possibly not entirely representative of the quality that will appear later).
 
-\textbf{Introduction Funnel - a general guide}
+You want to start off with a ``fantastic opening paragraph'' and then lead-in to the topic (I call this the ``once upon a time'' part of the thesis, which is setting the scene for your 'story' \ldots\ I mean study). I suggest the use of the ``funnel approach'' that is illustrated below. 
 
-The introduction, and especially the first paragraph, is a key part of your thesis or dissertation.  First impressions matter! This comment goes together with the abstract, but in a way the start of the introduction is in a may setting an even more important first impression (as examiners know that an abstract is often a short piece that is highly polished and possibly not entirely representative of the quality that will appear later.)
+For introducing your dissertation, you essentially want to start broad and then focus in, getting to the main point of the focus.  When you've got all the way to the scope, which explains some of the lower level details of \eg~specific context(s) of focus or aspects of exclusion, then one can transition (on something of a new tack) to explaining the outline of the dissertation, what chapters will follow and a brief summary of these, but without giving too many interesting points and findings away in these summaries of the chapters. 
 
-You want to start off with a "fantastic opening paragraph" and the lead-in to the topic (I call this the "once upon a time" part of the thesis, which is setting the scene for your 'story'... I mean study). I suggest the use of the "funnel approach" that is illustrated below. 
+\begin{verbatim}
+|  Background   | 
+|     Terms     | - Optional
+| Problem Desc  | - General problem -- may want to jump into objectives
+|   Objective   | 
+ \  Spec Probs /  - Specific problems to study
+  \ Questions /   - This is the research question you need to answer
+   \   ToR   /    - Terms of reference, requirements, function
+    \ Scope /     - Discussing details of focus, things to leave out etc
+     | DiP |      - Dissemination Plan; optional - but highly recommended
+      -----       
+      |   |       You kind of close off with the disemination plan,
+      -----       which is ulitimately the delivery of your work to 
+     /     \      the wider audience
+    /       \     
+   / Thesis  \    Then you can go on with (a somewhat different theme
+  / Overview  \   that is the structure of the thesis
+ /             \
+\end{verbatim}
 
-For introducing your dissertation, you essentially want to start broad and then focus in, getting to the main point of the focus. When you've got all the way to the scope, which explains some of the lower level details of e.g. specific context(s) of focus or aspects of exclusion, then one can transition (on something of a new tack) to explaining the outline of the dissertation, what chapters will follow and a brief summary of these, but without giving too much interesting points and findings away in these summaries of the chapters. 
-
-
-
-\begin{lstlisting}
------------------------
-\ (start on Ch1 Into) /
- \    Background     /
- |      Terms       |  (optional)
- \  Problem Desc   /  (general problem -- may want to jump into objectives)
-  \   Objective   /
-   \  Spec Probs /    (specific problems to study)
-    \ Questions /     (this is the research question you need to answer)
-     \   ToR   /      (i.e. Terms of reference, requirements, function, getting very specific)
-      \ Scope /       (discussing details of specific nitty gritty focus, things to leave out etc)
-       | DiP |        (DIssemination Plan; optional - but highly recommended)
-        -----         (you kind of close off with the disemination plan, which is ulitimately 
-        |   |         the delivery of your work to the wider audience)
-        -----
-       /     \        Then you can go on with (a somewhat different theme)
-      /       \       that is the structure of the thesis
-     / Overview\
-    / of Thesis \
-   /             \
-   |(end of Intro)|
-   ----------------
-\end{lstlisting}
-
-
-{\color{red}Sugegsted headings for the Introduction of a dissertation you may want to delete the remaining pieces of this tex document from here, the below are just suggestions}
-
+{\color{red} A suggested headings layout follows\ldots}
 
 \section{Background}
 
-Nice intro to background here...
+Nice intro to background here\ldots{}
 
 \subsection{Subsection}
+
+Some more detail follow in subsections\ldots{}
+
 \subsubsection{Sub-subsection}
 
-Generally the lowest possible subsection that appears in the table of contents, but you might want to take it further to e.g. a 4th number level for numbered headings.
+Sub-subsections are rare in long style reports, and generally do not appear in the table of contents, but you might want to take it even further:
 
-\emph{Note on numbering:} Note that usually level 4 does not need to be numbered, nor is it necessary to have in the table of context. But if you want to, you can have the numbering up to level 4 and you can put level 4 in the contents. (Having four numbers in a row is too much and too distracting for most readers, so be sensible in choosing the levels used).
+\paragraph{Note on numbering}
+
+Note that usually this level does not need to be numbered, nor is it necessary to have it in the table of contents.  If you really want to, you can modify the template to include numbering at this level and include it in the table of contents, but having more than four numbers in a row is too much and too distracting for most readers, so be sensible in choosing the number of levels used.
 
 \section{Important Terminology}
 
-If you have a few important terms, e.g. specially defined concepts or acronyms, it’s good to introduce them early on, and this is where you could do it (i.e., possibly even before the objective if the objective depends on these terms). Note this isn’t the same as the nomenclature in the preamble – it is a body of text that might have an introductory passage introducing the terms and why you need to define them, then you might go on to make important definitions, for example in the follow format:
+If you have a few important terms, \eg~specially defined concepts or acronyms, it's good to introduce them early on, and this is where you could do it (\ie~possibly even before the objective if the objective depends on these terms). Note this is not the same as the nomenclature in the preamble -- it is a body of text that might have an introductory passage introducing the terms and why you need to define them, then you might go on to make important definitions, for example in the following format:
 
-\begin{quote}
-	\underline{Defn:} Thesis. In this document, ‘thesis’ refers to a proposition put forward, and then discussed and proved or demonstrated in a scientific manner.	
-\end{quote}
+\defn{Thesis}{In this document, `thesis' refers to a proposition put forward, and then discussed and proved or demonstrated in a scientific manner.}
+
+The above style is good for a single term, but if you have a longer list of definitions, rather use a \verb|definitions| environment, as follows:
+
+\begin{definitions}
+  \defn{Term 1}{The definition of term 1.  It may span multiple lines in the table, but not multiple paragraphs.}
+  \defn{Term 2}{The definition of term 2.  It may span multiple lines in the table, but not multiple paragraphs.}
+  \defn{Term 3}{The definition of term 3.  It may span multiple lines in the table, but not multiple paragraphs.}
+  \defn{Term 4}{The definition of term 4.  It may span multiple lines in the table, but not multiple paragraphs.}
+\end{definitions}
 
 \section{Objectives}
 
 Start with a statement of your broad objective
 
-Narrow down to the specific objective of your project  (but see note below).
+Narrow down to the specific objective of your project (but see note below).
 
-\parbox{\textwidth}{
-	Note: There are essentially two slightly different approaches that you may choose to follow. You can decide which you prefer (my preference tends to be the `reading in a hurry approach' but you can decide as its your thesis).\\
-	\textbf{The `reading in a hurry' approach:} \\
-	\emph{1.3  Objectives} $\rightarrow$ \emph{1.4 Problem Description}  /  \emph{Problem Statement} $\rightarrow$ \emph{1.5 Sub-objective / Research Questions} $\rightarrow$ [\emph{Terms of Reference}] \\
-	\textbf{The `identify board area then narrowing down to specifics approach':} \\
-	\emph{1.3 Problem Description / Problem Statement} $\rightarrow$ \emph{1.4 Objectives} $\rightarrow$ \emph{1.5 Sub-objective / Research Questions} $\rightarrow$  [\emph{Terms of Reference}]
+\Card{\textbf{Note}}{
+   There are essentially two slightly different approaches that you may choose to follow.  You can decide which you prefer (my preference tends to be the `reading in a hurry approach' but you can decide as its your thesis).
+
+  \Card{\textbf{Reading in a hurry}}{
+    \mbox{ \emph{1.3 Objectives}                                     $\rightarrow$}
+    \mbox{ \emph{1.4 Problem Description} / \emph{Problem Statement} $\rightarrow$}
+    \mbox{ \emph{1.5 Sub-objective / Research Questions}             $\rightarrow$}
+    \mbox{[\emph{1.6 Terms of Reference}]}
+  }
+  \Card{\textbf{Identify board area then narrow down to specifics}}{
+    \mbox{ \emph{1.3 Problem Description / Problem Statement} $\rightarrow$}
+    \mbox{ \emph{1.4 Objectives}                              $\rightarrow$}
+    \mbox{ \emph{1.5 Sub-objective / Research Questions}      $\rightarrow$}
+    \mbox{[\emph{1.6 Terms of Reference}]}
+  }
 }
 
-\subsection{Sub-objective / motivational discussions}
-Explain how each sub-objective fits in to the main objective, or is needed for some reason to accomplish the objective.
+\subsection{Sub-objective / Motivational Discussions}
+\label{sec:SubObjectives}
+
+Explain how each sub-objective fits into the main objective, or is needed for some reason to accomplish the objective.
 
 \section{Problem Description or Problem Statement}
 
 \emph{(note: this is an alternate to Hypothesis)}
 
-If you have a broad problem that you intent to discover insights or useful facts, and you can apply a ``yes it works'' or ``no it doesn't work'' answer to your research, then use the problem description approach. This approach involves describing what you plan to observe, discover or get interesting – but as yet unknown – outputs from.
+If you have a broad problem that you intend to discover insights or useful facts about, and you can not apply a ``yes it works'' or ``no it doesn't work'' answer to your research, then use the problem description approach.  This approach involves describing what you plan to observe, discover or get interesting -- but as yet unknown -- outputs from.
 
-\section{Terms of Reference - requirements and functions}
+\section{Terms of Reference -- requirements and functions}
 
-This section is certainly a must-have for an engineering report, dissertation or thesis in which you are to build a prototype or system of some sort according to requirements (if you are pursuing an entirely empirical study, this section might be irrelevant as in such a case you would probably not have anyone asking for requirements).
+This section is certainly a must-have for an engineering report, dissertation or thesis in which you are to build a prototype or system of some sort according to user requirements.  If you are pursuing an entirely empirical study, this section might be irrelevant as in such a case you would probably not have anyone asking for requirements.
 
-Start off by referring back to the objective(s) section. Then outline the specific requirements that you need to satisfy for your project. It is a good idea to briefly explain how these requirements were established and to reference the sources of this information (e.g., meetings, email correspondence, telephone calls, etc. See the APA or Harvard referencing guide for how to reference such things).
+Start off by referring back to the objective(s) section. Then outline the specific requirements that you need to satisfy for your project. It is a good idea to briefly explain how these requirements were established and to reference the sources of this information (\eg~meetings, email correspondence, telephone calls, etc.  See the APA or Harvard referencing guide for how to reference such things).
 
-A good practice is to have a numbered list, one item for each main requirement (in the methodology you might break these top-level requirements into smaller parts; this would be an effective means to avoid having too much detail in the opening chapter).
+A good practice is to have a numbered list: one item for each main requirement (in the methodology you might break these top-level requirements into smaller parts; this would be an effective means to avoid having too much detail in the opening chapter).
 
-Once you have listed the requirements, then list the functionality. It is good to have some text between the requirements and functionality explaining how you went from the one list (i.e., requirements) to functionality. You may need to draw attention to particular portions of the literature review in which you investigated ways to provide functionality for a particular requirement. The functionality can also be given in a numbered list. For each function indicate which requirement it is linked to (i.e., this would essentially is following the good practice of a traceable design process).
+Once you have listed the requirements, then list the functionality. It is good to have some text between the requirements and functionality explaining how you went from the one list (\ie~requirements) to the other (\ie~functionality).  You may need to draw attention to particular portions of the literature review in which you investigated ways to provide functionality for a particular requirement. The functionality can also be given in a numbered list. For each function indicate which requirement it is linked to (\ie~this would essentially be following the good practice of a traceable design process).
 
 You should also mention in this section about the testing procedures that will be used to check the performance (and/or adequate provision) of the functionality and the requirements (in some cases the requirements may be satisfied by assuring its dependent functionality is properly provided). You could have a table that relates each test to satisfying one or more functionality item (possibly clarifying the requirement that is checked as a result).
 
-I usually like to have requirements numbered R1 to Rn (i.e., if you have three requirements you would number them R1, R2, and R3). In a similar manner, label the functionality F1, F2 and so on.
+I usually like to have requirements numbered R1 to Rn (\ie~if you have three requirements you would number them~\ref{req:MyFirstRequirement},~\ref{req:MySecondRequirement}, and~\ref{req:MyLastRequirement}). In a similar manner, label the functionality~\ref{func:MyFirstFunction},~\ref{func:MySecondFunction} and so on.
 In summary, you should end up with a structure something like this:
 
 The main requirements:
 
-\begin{enumerate}
-	\item R1. The first requirement described.
-	\item R2. The second requirement described.
-	\item R3. So on
-\end{enumerate}
+\begin{SpecList}{R}
+  \item \label{req:MyFirstRequirement}  The first requirement described
+  \item \label{req:MySecondRequirement} The second requirement described
+  \item \label{req:MyLastRequirement}   So on
+  \begin{enumerate}
+    \item Although the \verb|SpecList| environment does support nesting (up to 4 levels) you are encouraged not to make use of this feature.
+  \end{enumerate}
+\end{SpecList}
 
 The functionality needed to achieve these requirements:
 
-\begin{enumerate}
-	\item F1. The first function described.
-	\item F2. The second function described.
-	\item F3. So on
-\end{enumerate}
+\begin{SpecList}{F}
+  \item \label{func:MyFirstFunction}  The first function described (derived from~\ref{req:MyFirstRequirement})
+  \item \label{func:MySecondFunction} The second function described (derived from~\ref{req:MySecondRequirement})
+  \item \label{func:MyLastFunction}   So on (derived from~\ref{req:MyLastRequirement})
+\end{SpecList}
 
-Then introduce the table for doing the acceptance testing.
+Then introduce the table for doing the acceptance testing, as shown in table~\ref{tab:table-name}.  You can refer to a specific test like this: Test~\ref{test:SecondTest}.  Ideally you should only have one function and one requirement per test, otherwise the table becomes too wide.  If you do want to add more to the list, reduce the \verb|\TestTableDescriptionWidth| length.  Feel free to modify the \verb|TestTable| environment to suite your use-case.
 
-\begin{table}[ht]
-	\centering
-\begin{tabular}{|c|c|c|c|}
-	\hline 
-	Test Number & Description & Functions Checked & Requirements Tested \\ 
-	\hline 
-	T1 & Text & Text & Text \\
-	\hline 
-	T2 & Text & Text & Text \\
-	\hline 
-	T3 & Text & Text & Text \\ 
-	\hline 
-\end{tabular}
-    \caption{\label{tab:table-name}Breakdown of sub-tests to be performed in the acceptance testing.}
-\end{table}
+\begin{TestTable}{Breakdown of sub-tests to be performed in the acceptance testing.}{table-name}
+  \Test{FirstTest} {This is the test description of the first test.   It can be a paragraph long.}{\ref{func:MyFirstFunction}} {\ref{req:MyFirstRequirement}}
+  \Test{SecondTest}{This is the test description of the second test.  It can be a paragraph long.}{\ref{func:MySecondFunction}}{\ref{req:MySecondRequirement}}
+  \Test{LastTest}  {This is the test description of the last test.    It can be a paragraph long.}{\ref{func:MyLastFunction}}  {\ref{req:MyLastRequirement}}
+\end{TestTable}
 
-\section{Hypotheses (Alternative to Problem Description)}
+\section{Hypotheses}
 
-A hypothesis is appropriate if you have a well focused project in which you want a binary result as in: ``yes it works'' or ``no it doesn’t work''. Of course there is still likely to be some `fuzziness' the result such as yes it work well in situation A, kind of in situation B and not at all in case C. But essentially you’d be trying to show a yes/no result (or multiple yes/no results) in the end.
+\emph{(note: this is an alternate to Problem Description)}
 
-Following the hypothesis approach, you would mention hypothesis somewhere in this introduction chapter, not necessarily at this particular point – maybe earlier maybe later depending on whatever makes it easier to read.
+A hypothesis is appropriate if you have a well focused project in which you want a binary result as in: ``yes it works'' or ``no it doesn't work''. Of course there is still likely to be some `fuzziness' in the result such as ``yes it works well in situation A, kind of in situation B and not at all in case C'', but essentially you'd be trying to show a yes/no result (or multiple yes/no results) in the end.
 
-Generally, it’s a good idea to start with a broad hypothesis, typically labelled H0.
+Following the hypothesis approach, you would mention hypotheses somewhere in this introduction chapter, not necessarily at this particular point -- maybe earlier, maybe later, depending on whatever makes it easier to read.
 
-You then refine H0 into a few sub-hypotheses, e.g. H1 to H3, which are often related to the sub-objectives describe in 1.2. You would then clearly be deciding a series of yes or no answers to H1-3 which would then imply something about H0. If you wanted to be fancy you might go as far as using mathematical logic to explain these implications, but that’s more commonly found in math / applied math theses.
+Generally, it's a good idea to start with a broad hypothesis, typically labelled H0.
+
+You then refine \ref{hyp:DataRate} into a few sub-hypotheses, \eg~\ref{hyp:CanSendID} to~\ref{hyp:AccurateLoc}, which are often related to the sub-objectives described in~\ref{sec:SubObjectives}. You would then clearly be deciding a series of yes or no answers to \ref{hyp:CanSendID}~to~\ref{hyp:AccurateLoc}, which would then imply something about~\ref{hyp:DataRate}. If you wanted to be fancy you might go as far as using mathematical logic to explain these implications, but that's more commonly found in math / applied math theses.
 
 Example of how the main hypothesis and sub-hypotheses could be presented:
 
-\begin{quote}
-	\textbf{Hypothesis H0:} A 600bps data transmission modulated upon a 1s sonar ping of base frequency 3KHz can sustaining data transmissions of 75bytes per ping over 2 a Km distance, with bit error rate below 2\%.
-\end{quote}
+\Hypothesis{DataRate}{
+  A 600~bps data transmission modulated upon a 1~s sonar ping of base frequency 3~kHz can sustaining data transmissions of 75~bytes per ping over a 2~km distance, with bit error rate below 2\%.
+}
 
-\begin{quote}
-	\textbf{Hypothesis H1:} Data packets of length 75bytes, overlaid on 3KHz sonar pings, are sufficient to provide encrypted submarine identification codes.
-\end{quote}
+\Hypothesis{CanSendID}{
+  Data packets of length 75~bytes, overlaid on 3~kHz sonar pings, are sufficient to provide encrypted submarine identification codes.
+}
 
-\begin{quote}
-	\textbf{Hypothesis H2:} Data transmissions overlaid on 3KHz sonar pings cause minimal degradation in the accuracy of echo location results.
-\end{quote}
-
+\Hypothesis{AccurateLoc}{
+  Data transmissions overlaid on 3~kHz sonar pings cause minimal degradation in the accuracy of echo location results.
+}
 
 \section{Scope and Limitations}
 
-What were the restrictions on your project? Usually, they are related to time and budgetary constrains. Other scope limitations taking measure to compensate for, or eliminate potential Ethics conflicts, include avoiding invasive testing techniques, contention concerning IP rights, and taking human or animal test subjects out of the research design to circumvent potential injury, subjectivity or other factors.
+What were the restrictions on your project?  Usually, they are related to time and budgetary constrains.  Other scope limitations taking measure to compensate for, or eliminate, potential ethics conflicts, include avoiding invasive testing techniques, contention concerning IP rights, and taking human or animal test subjects out of the research design to circumvent potential injury, subjectivity or other factors.
 
 A general structure for the scope could read as follows:
 
- <short blurb making mention of major scope and reasons for this>
+\begin{itemize}
+  \item short blurb making mention of major scope and reasons for this
+  \item point form list of scope details
+  \item rounding off blurb reflecting on the scope
+\end{itemize}
  
- <point form list of scope details>
- 
- <rounding off blurb reflecting on the scope>
- 
-\section{Dissemination Plan (PhD should have this!)}
+\section{Dissemination Plan}
 
-In this you can explain the way you plan to disseminate this project (i.e. share this work and it’s findings with other). If you’ve completed the dissemination section of the proposal, then you know pretty much what goes here. But, unlike the proposal perhaps, don’t make too many promises in this one, because the examiner will see it. Ideally if you have a paper published already you would have it in the list of planned outputs and be able to make a song and dance that it has been accepted / published and has gone through a thorough peer review process and been accepted by the scientific community (that can be said for either a conference or journal – but only, of course, if it is one that has a peer review process, if there’s just a review of the abstract, or even no review, just pay to attend the conference, then you don’t want to really have a mention of what sort of low value output, if anything it would just reinforce difficulty of getting the topic accepted, so you only want to mention options and accomplishments that are peer reviewed, and even better accredited and indexed by Thomson / Clarivate Analytics Web of Science (this ‘Web of Science’ is top notch indexing), or Scopus Accredited / Indexed (if it is Scopus indexed it is also Scopus accredited) which is prestigious also (all ‘Web of Science’ tend to be Scopus as well, but not all Scopus items are in ‘Web of Science’). If it’s not indexed by either of these, then the lower (but still somewhat OK) is the Directory of Open Access Journals (DOAJ). Copernicus is varied, from great to not great, somewhat OK but not great if just this one. INSPEC has increased greatly in quality but is not as prestigious as a Web of Science or Scopus indexing.  If the journal raves about something like ``Google Scholar'' or ``Citesear'' indexing, it doesn’t really mean much as these are automatic engines that are impartial to assessing the quality of the journal.
+\textbf{\textcolor{red}{PhD must have this!}}
+
+In this section you explain the way you plan to disseminate this project (\ie~share this work and it's findings with others). If you've completed the dissemination section of the proposal, then you know pretty much what goes here, but, unlike the proposal perhaps, don't make too many promises in this one, because the examiner will see it.
+
+Ideally, if you have a paper published already you would have it in the list of planned outputs and be able to make a song and dance that it has been accepted / published and has gone through a thorough peer review process and been accepted by the scientific community.
+
+That can be said for either a conference or journal -- but only, of course, if it is one that has a peer review process, if there's just a review of the abstract, or even no review (\ie~just pay to attend the conference) then you don't want to really have a mention of what sort of low value output, if anything it would just reinforce difficulty of getting the topic accepted, so you only want to mention options and accomplishments that are peer reviewed, and, even better, accredited.
+
+Aim for being accredited and indexed by Thomson / Clarivate Analytics Web of Science (this `Web of Science' is top notch indexing), or Scopus Indexed (if it is Scopus indexed it is also Scopus accredited), which is prestigious also (all `Web of Science' tend to be Scopus as well, but not all Scopus items are in `Web of Science').  If it's not indexed by either of these, then the lower (but still somewhat OK) is the Directory of Open Access Journals (DOAJ). Copernicus is varied, from great to not great, somewhat OK but not great if just this one. INSPEC has increased greatly in quality but is not as prestigious as a `Web of Science' or Scopus indexing.
+
+If the journal raves about something like `Google Scholar' or `Citesear' indexing, it doesn't really mean much as these are automatic engines that are impartial to assessing the quality of the journal.
 
 \section{Document Outline}
 
-\emph{Suggestion:} Discuss layout of thesis at end of this chapter. Ideally, the preceding subsections should have given a sufficiently clear and concise explanation of what is to be done without the reader having to delve into this part.
+\emph{Suggestion:} Discuss layout of thesis at the end of this chapter.  Ideally, the preceding subsections should have given a sufficiently clear and concise explanation of what is to be done without the reader having to delve into this part.
 
-You could optionally have a figure in this section to augment your description. You could start each paragraph summarising the chapter with the chapter and its number in bold as below (but you could e.g. leave out the bold if you think that makes it more consistent with the rest of the manuscript style.) 
+You could optionally have a figure in this section to augment your description. You could start each paragraph summarising the chapter with the chapter and its number in bold as below (but you could \eg~leave out the bold if you think that makes it more consistent with the rest of the manuscript style.) 
 
 \textbf{Chapter 2} concerns the literature review. It presents technologies, theories and techniques on which this thesis builds.
 
-\textbf{Chapter 3} (usually) presents the research methodology for this project. The methodology should give a good amount of detail about the acceptance test. i.e., For the acceptance test, explain how you are going to meticulously prove that each item of functionality works, and by implication each requirement as satisfied (as was listed in the introduction).
+\textbf{Chapter 3} (usually) presents the research methodology for this project. The methodology should give a good amount of detail about the acceptance test. \ie~For the acceptance test, explain how you are going to meticulously prove that each item of functionality works, and by implication each requirement as satisfied (as was listed in the introduction).
 
-\textbf{Chapter 4} gives the design (often called Prototype Design if indeed you are developing a prototype to experimentally test a design concept). You may decide to include a specification prior to the design (usually this is not expected in a BSc or MSc project, but should be given in a PhD thesis). If you have a significant amount to write up about the implementation (i.e. to show pictures of your pcbs, development environment setups, various code and screenshots) then add a separate chapter for implementation. Note that it is preferred to have lengthy blocks of code in the appendix, keeping only snippets (or code fragments) to explain parts of the implementation within the main part of the writeup.
+\textbf{Chapter 4} gives the design (often called Prototype Design if indeed you are developing a prototype to experimentally test a design concept). You may decide to include a specification prior to the design (usually this is not expected in a BSc or MSc project, but should be given in a PhD thesis).  If you have a significant amount to write up about the implementation (\ie~to show pictures of your PCBs, development environment setup, various code and screenshots) then add a separate chapter for implementation. Note that it is preferred to have lengthy blocks of code in the appendix, keeping only snippets (or code fragments) to explain parts of the implementation within the main part of the write-up.
 
-\textbf{Chapter 5} presents the results, showing results of the design / system in action, and results of the tests (i.e., carrying out the stages of the acceptance tests).
-Chapter 6 provides the conclusions. This may be preceded by a discussion of what was done, a discussion of results and testing (e.g., what limitations were found related to ways tests were done, good or bad things about the methodology, amongst other observations related to results or the way they were obtained), followed by a more generalized discussion and conclusions. Provide also future work plans and suggestions.
+\textbf{Chapter 5} presents the results, showing results of the design / system in action, and results of the tests (\ie~carrying out the stages of the acceptance tests).
 
-And don’t forget the references at the end of the last chapter!
+\textbf{Chapter 6} provides the conclusions. This may be preceded by a discussion of what was done, a discussion of results and testing (\eg~what limitations were found related to ways tests were done, good or bad things about the methodology, amongst other observations related to results or the way they were obtained), followed by a more generalised discussion and conclusions. Provide also future work plans and suggestions.
+
+And don't forget the references at the end of the last chapter!
+
+
+
+

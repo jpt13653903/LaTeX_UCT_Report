@@ -11,6 +11,7 @@
 
 \newcommand{\etal}       {\emph{et~al.}}
 \newcommand{\ie}         {i.e.}
+\newcommand{\eg}         {e.g.}
 \newcommand{\bookcite}[2]{\cite{#1}~pg.~#2}
 %-------------------------------------------------------------------------------
 
@@ -84,6 +85,26 @@
 }
 %-------------------------------------------------------------------------------
 
+% The problem with \definition above is that it's meant for long lists of
+% definitions, i.e. the space reserved for the term is very large...
+
+\newcommand{\defn}[2]{
+  \begin{quote}
+    \textbf{#1:}~~#2
+  \end{quote}
+}
+
+\newenvironment{definitions}{
+  \begin{center}
+  \renewcommand{\defn}[2]{\textbf{##1:} & ##2 \\}
+  \begin{tabular}{lp{\DefinitionBodyWidth}}
+}{
+  \end{tabular}
+  \end{center}
+}
+%-------------------------------------------------------------------------------
+
+
 \newlength{\HypothesisLabelWidth}
 \settowidth{\HypothesisLabelWidth}{\textbf{Hypothesis~H99:~}}
 
@@ -122,6 +143,49 @@
     \vspace{1em}
   }
 \fi
+%-------------------------------------------------------------------------------
+
+\newenvironment{SpecList}[1]{%
+  \begin{enumerate}%
+    \def\theenumi    {#1\arabic{enumi}}%
+    \def\theenumii   {\theenumi.\arabic{enumii}}%
+    \def\theenumiii  {\theenumii.\arabic{enumiii}}%
+    \def\theenumiv   {\theenumiii.\arabic{enumiv}}%
+    \def\labelenumi  {\theenumi.}
+    \def\labelenumii {\theenumii}
+    \def\labelenumiii{\theenumiii}
+    \def\labelenumiv {\theenumiv}
+}{%
+  \end{enumerate}%
+}
+%-------------------------------------------------------------------------------
+
+\newlength{\TestTableDescriptionWidth}
+\setlength{\TestTableDescriptionWidth}{\columnwidth}
+\addtolength{\TestTableDescriptionWidth}{-15ex}
+
+\newcounter{TestNumber}
+\renewcommand{\theTestNumber}{T\arabic{TestNumber}}
+
+\newenvironment{TestTable}[2]{
+  \begin{TableEnvironment}{#1}{#2}
+  \setcounter{TestNumber}{0}
+  \newcommand{\Test}[4]{%
+    \refstepcounter{TestNumber}%
+    \label{test:##1}%
+    \theTestNumber & ##2 & ##3 & ##4 \\
+  }
+  \begin{tabular}{cp{\TestTableDescriptionWidth}cc}
+  \hline
+  \hline
+  \textbf{Test} & \textbf{Description} & \textbf{Func} & \textbf{Req} \\
+  \hline
+}{
+  \hline
+  \hline
+  \end{tabular}
+  \end{TableEnvironment}
+}
 %-------------------------------------------------------------------------------
 
 \definecolor{Old}     {rgb}{0.7, 0.7, 0.8}
