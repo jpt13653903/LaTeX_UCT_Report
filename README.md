@@ -1,6 +1,15 @@
 # LaTeX UCT Report
 
-LaTeX template useful for UCT reports and formal dissertations
+LaTeX template useful for UCT reports (lab reports or BSc final year project 
+reports) and formal Masters or Doctoral dissertations.
+
+**Disclaimer note:** these resources are based around what has been used in 
+the Department of Electrical Engineering at UCT; different departments or 
+research units may have their own approaches and expectations of what is 
+required and how to prepare technical documents of this nature.  You are thus 
+advised to ensure your work is aligned to what is needed for your context.
+We are providing this resources as use-at-own-risk contributions (see license 
+details link below).
 
 ## Dependencies
 
@@ -51,6 +60,12 @@ The output style is controlled by means of flags defined in the
 There is a special make target `all_options`, which generates output for all 8 
 combinations of the option flags for both Article and Report types.  The 
 resulting PDFs are saved in the [`Output`](Output) folder.
+
+## Figures Preview Feature
+
+It is sometimes handy to have a quick reference to all your figures, and where 
+to find them.  The `FiguresPreview` folder is meant for this purpose.  To 
+update, browse to that folder and run `make` within a bash-style console.
 
 ## License
 

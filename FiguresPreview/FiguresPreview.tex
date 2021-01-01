@@ -1,0 +1,65 @@
+\documentclass[onecolumn, a4paper, 12pt, titlepage, fleqn, oneside]{article}
+%-------------------------------------------------------------------------------
+
+\setlength  {\hoffset}       {-1in}
+\setlength  {\textwidth}     {\paperwidth}
+\addtolength{\textwidth}     {-10mm}
+\setlength  {\oddsidemargin} {5mm}
+\setlength  {\evensidemargin}{5mm}
+\setlength  {\marginparsep}  {0mm}
+\setlength  {\marginparwidth}{0mm}
+\setlength  {\marginparpush} {0mm}
+
+\setlength  {\voffset}       {-1in}
+\setlength  {\textheight}    {\paperheight}
+\addtolength{\textheight}    {-10mm}
+\setlength  {\topmargin}     {5mm}
+\setlength  {\headheight}    {0mm}
+\setlength  {\headsep}       {0mm}
+\setlength  {\footskip}      {0mm}
+%-------------------------------------------------------------------------------
+  
+% Use "blocky" paragraphs
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0mm}
+
+\pagestyle{empty}
+%-------------------------------------------------------------------------------
+
+\usepackage[none]{hyphenat} % Disables hyphenation
+\usepackage[T1]  {fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage      {graphicx} % Enables graphics import
+\usepackage      {url}
+%-------------------------------------------------------------------------------
+
+\newlength{\FigureWidth}
+\newlength{\FigureHeight}
+
+\newcommand{\Figure}[1]{%
+  \settowidth {\FigureWidth} {\includegraphics[scale=1.0]{../Figures/#1}}
+  \settoheight{\FigureHeight}{\includegraphics[scale=1.0]{../Figures/#1}}
+  \vspace{1em}
+  \begin{minipage}[t]{\textwidth}\centering
+    \ifdim\FigureWidth<\textwidth
+      \ifdim\FigureHeight<0.9\textheight
+        \includegraphics[scale=1.0]{../Figures/#1}
+      \else
+        \includegraphics[keepaspectratio=true, width=\textwidth, height=0.9\textheight]{../Figures/#1}
+      \fi
+    \else
+      \includegraphics[keepaspectratio=true, width=\textwidth, height=0.9\textheight]{../Figures/#1}
+    \fi\\[0.5em]
+    \url{#1}\par
+  \end{minipage}\par
+}
+%-------------------------------------------------------------------------------
+
+\begin{document}
+\begin{sloppypar}
+
+\input{Body/FigureList}
+
+\end{sloppypar}
+\end{document}
+%-------------------------------------------------------------------------------
