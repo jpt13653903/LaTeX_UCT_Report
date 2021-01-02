@@ -1,2 +1,14 @@
 \Chapter{Experimentation}
 \label{Ch:Experimentation}
+
+This chapter would provide explanation of the software and/or hardware tests to be performed. Often, a accumulative sequence of testing is done starting with smaller focused tests (e.g. testing algorithms), progressing towards increasingly more comprehensive tests. A typical sequence would be:
+
+\begin{enumerate}
+	\item Algorithmic testing (e.g. demonstrating cases that the algorithm works effectively either mathematically / theoretically or using rapid scripting such as MATLAB).
+	\item Modular testing (for software) or component testing or component integration/performance testing (for hardware) -- note that these are commonly testing pieces in isolation, or testing  connected pieces that are not fully assembled into the larger system.
+	\item Sub-system testing -- this is often just testing collections of modules or components to see if they work together. (Might skip this or put it in an appendix as it can lead to the manuscript being too long.)
+	\item Integration testing -- this may be integration of sub-systems or testing of the system as a whole with its various parts working together.
+	\item System testing or acceptance testing -- this may be thorough testing of the specified requirements, both functional and non-functional requirements and/or determining the extent to which the research objectives are met. This may be done in addition, or instead of, integration testing (integration testing, in contrast to acceptance testing, tend to focus more on seeing if the parts work together and that the system is ready for the more structured acceptance testing to be applied).
+\end{enumerate}
+
+You might utilize the V-Model  \footnote{Graessler, Iris, Julian Hentze, and Tobias Bruckmann. "V-models for interdisciplinary systems engineering." DS 92: Proceedings of the DESIGN 2018 15th International Design Conference. 2018.} in planning your experiments, particuarly for large systems (e.g. PhD level) where you want to show how each aspect is thoroughly tested. However, this is not a general case. More commonly, the experimentation process would follow the above points (these points are relevant to BSc through to PhD level projects).
