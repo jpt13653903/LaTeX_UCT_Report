@@ -89,18 +89,22 @@ The above shows a snippet without caption and placed inline (\ie~it does not flo
   }
 \end{OpenCL_float}
 
-Only list what is relevant.  Do not give too much detail -- just enough to show what you've done.  This template supports the following languages:
-
-\begin{itemize}
-  \item Matlab (Octave)
-  \item GLSL
-  \item OpenCL
-  \item Verilog
-  \item VHDL
-  \item TCL
-  \item Python
-  \item C++ (use the name `Cpp')
-\end{itemize}
+\begin{minipage}[t]{\textwidth} % Prevent page-breaks for this list and associated paragraph
+  Only list what is relevant.  Do not give too much detail -- just enough to show what you've done.  This template supports the following languages:
+  
+  \vspace{-2ex} % make the list part of the previous paragraph
+  \begin{itemize}\setlength{\itemsep}{-1ex} % Tighten the list spacing
+    \item Matlab (Octave)
+    \item GLSL
+    \item OpenCL
+    \item Verilog
+    \item VHDL
+    \item TCL
+    \item Python
+    \item C++ (use the name `Cpp')
+    \item Scala
+  \end{itemize}
+\end{minipage}
 
 \section{Integration or Test Rig}
 
