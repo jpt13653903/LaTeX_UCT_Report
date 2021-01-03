@@ -1,10 +1,15 @@
 \Chapter{Results}
+\label{Ch:Results}
 
-The results section is for presenting and discussing your findings.  You can split it into subsections if the experiment has multiple sections or stages.
+The results chapter is for presenting and discussing your findings, which can split into sections if the experiment has multiple parts, or stages.  You might also want to have a `Discussion' or `Discussion of Results' chapter, which may focus on either more detailed discussion of particular results, or more comprehensive discussion of the results and system performance as a whole.  If you have a Discussion of Results section, then you do not want to discuss too much about the specific results in this chapter and rather move the main discussion or reflective considerations of these to the Discussion of Results chapter.
 
-\section{Figures}
+However, and this is an important reminder, ensure that you do have some text of discussion for your results, to take the reader through your results and the figures you may provide.  Make sure not to just put one figure after another without any attempt to explain the sequencing and what is being shown and perhaps some key issues in the figures presented (a monolithic sequence of figure after figure without any attempt at explanation will get undesirable responses from examiners).
 
-Include good quality graphs (see Fig.~\ref{fig:r_vs_N_f=0_0005_P=90}).  These were produced by the Octave code presented in listings~\ref{lst:FormatFig} and~\ref{lst:PlotExample}.  You can play around with the \texttt{PaperSize} and \texttt{PaperPosition} variables to change the aspect ratio.  An easy way to obtain more space on a paper is to use wide, flat figures, such as Fig.~\ref{fig:Line_Signals}.
+If you have an experiments section, it is often useful to have a clear connection of experiment section corresponding to a result section showing results for that test. Examiners often appreciate that sort of clear and consistent structure that is easy to follow.  For example, if you have section~5.1 as Modular Testing, then you could correspond to~6.1 Modular Testing Results (the two sections should be cross-linked with \verb|\label| and \verb|\ref|, in both directions)
+
+\section{Tips for Results Figures}
+
+Include good quality graphs (see Fig.~\ref{fig:r_vs_N_f=0_0005_P=90} for an example).  These were produced by the Octave code presented in listings~\ref{lst:FormatFig} and~\ref{lst:PlotExample}.  You can play around with the \texttt{PaperSize} and \texttt{PaperPosition} variables to change the aspect ratio.  An easy way to obtain more space for an article is to use wide, flat figures, such as Fig.~\ref{fig:Line_Signals}.
 
 \Figure[width=0.8\columnwidth]{The correlation coefficient as a function of sample count.}{r_vs_N_f=0_0005_P=90}
 
@@ -14,13 +19,13 @@ Include good quality graphs (see Fig.~\ref{fig:r_vs_N_f=0_0005_P=90}).  These we
     set(gcf, 'PaperOrientation', 'landscape');
     set(gcf, 'PaperSize'       ,       [8, 4]);
     set(gcf, 'PaperPosition'   , [0, 0, 8, 4]);
-   
+
     set(gca, 'FontName', 'Times New Roman');
     set(gca, 'Position', [0.1 0.2 0.85 0.75]);
-   
+
     xlabel(["\n" X]);
     ylabel([Y "\n\n"]);
-   
+
     setenv("GSC", "GSC"); # Eliminates stupid warning
     print(...
       [File '.pdf'],...
@@ -67,7 +72,7 @@ Tables are often a convenient means by which to specify lists of parameters.  An
 
 \section{Pictures and Screen-shots}
 
-When you include screen-shots, pdf\LaTeX{} supports JPG and PNG file formats.  PNG is preferred for screen-shots, as it is a loss-less format.  JPG is preferred for photos, as it results in a smaller file size.  It's generally a good idea to resize photos (not screen-shots) to be no more that 300~dpi, in order to reduce file size.  For 2-column article format papers, this translates to a maximum width of 1024.  \textbf{Never change the aspect ratio of screen-shots and pictures!}
+When you include screen-shots, pdf\LaTeX{} supports JPG and PNG file formats.  PNG is preferred for screen-shots, as it is a loss-less format.  JPG is preferred for photos, as it results in a smaller file size.  It's generally a good idea to resize photos (not screen-shots) to be no more that 300~dpi, in order to reduce file size.  For 2-column article format papers, this translates to a maximum width of 1024~pixels.  \textbf{Never change the aspect ratio of screen-shots and pictures!}
 
 It is highly recommended to make use of the \verb|\Figure| macro for figures.  It puts all the formatting tweaks in one place, so that you don't need to update all the individual figure inclusion points when you want to do a styling update.  The file name is used for the \LaTeX\ label, such as ``Fig.~\ref{fig:UCT.pdf}''.
 

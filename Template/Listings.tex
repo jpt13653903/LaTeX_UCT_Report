@@ -1,5 +1,5 @@
 \usepackage{listings}
-\lstloadlanguages{C, C++, Matlab, Verilog, VHDL, Python, TCL}
+\lstloadlanguages{C, C++, Matlab, Verilog, VHDL, Python, TCL, Scala}
 %-------------------------------------------------------------------------------
 
 \definecolor{keyword}{rgb}{0.5, 0.0, 0.0}
@@ -25,7 +25,7 @@
   upquote          = true,%
   showstringspaces = false,%
   keywordstyle     = [1]{\color{keyword}\slshape},%
-  keywordstyle     = [2]{\color{keyword}\bfseries},%
+  keywordstyle     = [2]{\color{string2}\bfseries},%
   commentstyle     =    {\color{comment}},%
   stringstyle      =    {\color{string}}
 }
@@ -286,6 +286,27 @@
 
 \lstnewenvironment{Cpp}{
   \SetupCpp
+  \StartListingInline
+}{
+  \EndListingInline
+}
+%-------------------------------------------------------------------------------
+
+\newcommand{\SetupScala}{
+  \lstset{%
+    language = Scala
+  }%
+}
+
+\lstnewenvironment{Scala_float}[2]{
+  \SetupScala
+  \StartListing{#1}{#2}
+}{
+  \EndListing
+}
+
+\lstnewenvironment{Scala}{
+  \SetupScala
   \StartListingInline
 }{
   \EndListingInline

@@ -1,3 +1,19 @@
+%-------------------------------------------------------------------------------
+%
+% DISCLAIMER and use policy:
+%
+% Please note that this template and related documentation are provided for
+% free without any grantees or similar assurances; if you decide to use these
+% resources then you are agreeing to do so at your own risk.  We accordingly
+% make no assurances as to accuracy, completeness, correctness, suitability, or
+% validity of any information provided by these resources and the authors will
+% not be liable for any errors or omissions in this information or any losses or
+% damages arising from its use. All information is provided on an as-is basis.
+% It is the user's responsibility to verify any of these guidelines and
+% structures that they choose to utilise.
+%-------------------------------------------------------------------------------
+
+% Loading in the setting and overall style choices for the document:
 \input{Template/Flags}
 \input{Template/Template}
 %-------------------------------------------------------------------------------
@@ -10,18 +26,18 @@
   \subtitle     {Subtitle}
   \author       {Your Name}
   \supervisor   {Your Supervisor(s)}
-  \department   {Electrical and Electronic Engineering}
+  \department   {Electrical Engineering}
   \degreename   {Bachelor of Science}
   \field        {Electrical and Computer Engineering}
   \keywords     {Some keywords relating to your research}
-  \date         {November 2020} % Month Year only (leave out for \today)
+  \date         {January 2021} % Month Year only (leave out for \today)
 \else
   \subjectcode  {Subject Code}
   \subjectname  {Subject Name}
   \title        {Title of Paper}
   \author       {Author 1  \\ Author 2  \\ Author N }
   \studentnumber{ATHNUM001 \\ ATHNUM010 \\ ATHNUM011}
-  \date         {22 April 2018} % Full date (leave out for \today)
+  \date         {4 January 2020} % Full date (leave out for \today)
 \fi
 %-------------------------------------------------------------------------------
 
@@ -37,18 +53,18 @@
 
 \setcounter{page}{0}
 \input{FrontMatter/Abstract}
-  
+
 {
   \clearpage
   \thispagestyle{empty}
-  
+
   \renewcommand{\baselinestretch}{0}\normalsize
   \tableofcontents
-  
+
   \renewcommand{\listfigurename}{List of Figures and Listings}
   \listoffigures
   \addcontentsline{toc}{chapter}{\listfigurename}
-  
+
   \listoftables
   \addcontentsline{toc}{chapter}{\listtablename}
 }
@@ -72,9 +88,23 @@
 %-------------------------------------------------------------------------------
 
 \backmatter
- 
-\bibliography{../Bibliography/Bibliography}
-\addcontentsline{toc}{chapter}{Bibliography}
+
+% NOTE about Bibliography vs References / List of References:
+%
+% A reference list (often termed just References, and comes after the last
+% chapter) usually contains only those sources you cited in-text in your
+% manuscript. In contrast a bibliography is usually a full list of the sources
+% that you made use of and helped develop the ideas for your study, as well
+% as items that influenced your project but were not specifically cited, in
+% addition to all the sources that you cited in your actual write-up. The
+% bibliography tends to be a much lengthier list and can in some ways be less
+% focused than a list of reference. Usually, engineering studies prefer a list
+% of references (where as disciplines such as humanities, journalism and social
+% sciences commonly use the more extensive bibliography).
+
+\renewcommand{\bibname}{References}         % leave this out if you want "Bibliography"
+\bibliography{../Bibliography/Bibliography} %   and
+\addcontentsline{toc}{chapter}{References}  % change "References" to "Bibliography" too
 \clearpage
 
 \newcounter{Temp}
@@ -91,4 +121,9 @@
 
 \end{sloppypar}
 \end{document}
+%-------------------------------------------------------------------------------
+
+% Template developed by J. Taylor and S. Winberg, 2020
+% This tempate was designed around use for electrical and computer engineering.
+% See disclaimer notice above for more information.
 %-------------------------------------------------------------------------------

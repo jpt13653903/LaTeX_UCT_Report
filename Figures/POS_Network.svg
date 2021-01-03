@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120mm"
+   height="90mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="POS_Network.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="172.05408"
+     inkscape:cy="156.4306"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="mm"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1592"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-text-baseline="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-center="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="8"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       units="mm"
+       spacingx="3.7795276"
+       spacingy="3.7795276"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-712.20469)">
+    <rect
+       rx="4.9262152"
+       ry="4.9262152"
+       y="901.18103"
+       x="30.236221"
+       height="30.236263"
+       width="30.236221"
+       id="rect935"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-15.118111"
+       inkscape:transform-center-y="-15.118115" />
+    <text
+       id="text1011-9"
+       y="912.51965"
+       x="45.354328"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"
+       inkscape:transform-center-x="-15.394914"
+       inkscape:transform-center-y="-16.237636"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="912.51965"
+         x="45.354328"
+         sodipodi:role="line"
+         id="tspan1002">Front</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="923.70874"
+         x="45.354328"
+         sodipodi:role="line"
+         id="tspan1036">End</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path966"
+       d="M 30.236223,886.06299 H 211.65356"
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:2.83464575;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-90.70867"
+       inkscape:transform-center-y="-45.354288" />
+    <circle
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8465116;paint-order:normal"
+       id="path1028"
+       cx="204.0945"
+       cy="916.31415"
+       r="1.8897638"
+       inkscape:transform-center-x="-173.85828"
+       inkscape:transform-center-y="-15.10313" />
+    <circle
+       r="1.8897638"
+       cy="916.31415"
+       cx="211.65356"
+       id="circle1030"
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8465116;paint-order:normal"
+       inkscape:transform-center-x="-181.41734"
+       inkscape:transform-center-y="-15.10313" />
+    <circle
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8465116;paint-order:normal"
+       id="circle1032"
+       cx="219.21262"
+       cy="916.31415"
+       r="1.8897638"
+       inkscape:transform-center-x="-188.9764"
+       inkscape:transform-center-y="-15.10313" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect1038"
+       width="30.236221"
+       height="30.236263"
+       x="75.590553"
+       y="901.18103"
+       ry="4.9262152"
+       rx="4.9262152"
+       inkscape:transform-center-x="-60.472444"
+       inkscape:transform-center-y="-15.118115" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="90.708664"
+       y="912.51965"
+       id="text1044"
+       inkscape:transform-center-x="-60.749249"
+       inkscape:transform-center-y="-16.237636"><tspan
+         id="tspan1040"
+         sodipodi:role="line"
+         x="90.708664"
+         y="912.51965"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">Front</tspan><tspan
+         id="tspan1042"
+         sodipodi:role="line"
+         x="90.708664"
+         y="923.70874"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">End</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect1046"
+       width="30.236221"
+       height="30.236263"
+       x="120.94489"
+       y="901.18103"
+       ry="4.9262152"
+       rx="4.9262152"
+       inkscape:transform-center-x="-105.82678"
+       inkscape:transform-center-y="-15.118115" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="136.063"
+       y="912.51965"
+       id="text1052"
+       inkscape:transform-center-x="-106.10359"
+       inkscape:transform-center-y="-16.237636"><tspan
+         id="tspan1048"
+         sodipodi:role="line"
+         x="136.063"
+         y="912.51965"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">Front</tspan><tspan
+         id="tspan1050"
+         sodipodi:role="line"
+         x="136.063"
+         y="923.70874"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">End</tspan></text>
+    <rect
+       rx="4.9262152"
+       ry="4.9262152"
+       y="901.18103"
+       x="166.29922"
+       height="30.236263"
+       width="30.236221"
+       id="rect1054"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-151.18112"
+       inkscape:transform-center-y="-15.118115" />
+    <text
+       id="text1060"
+       y="912.51965"
+       x="181.41733"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"
+       inkscape:transform-center-x="-151.45791"
+       inkscape:transform-center-y="-16.237636"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="912.51965"
+         x="181.41733"
+         sodipodi:role="line"
+         id="tspan1056">Front</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="923.70874"
+         x="181.41733"
+         sodipodi:role="line"
+         id="tspan1058">End</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="34.015751"
+       y="882.28345"
+       id="text1044-1"
+       inkscape:transform-center-x="-44.09543"
+       inkscape:transform-center-y="-52.116262"><tspan
+         id="tspan1042-5"
+         sodipodi:role="line"
+         x="34.015751"
+         y="882.28345"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">CAN Bus over RS-485</tspan></text>
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect1085"
+       width="60.472439"
+       height="30.236263"
+       x="211.65356"
+       y="870.94482"
+       ry="4.9262152"
+       rx="4.9262152"
+       inkscape:transform-center-x="-211.65357"
+       inkscape:transform-center-y="-45.354322" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="241.88977"
+       y="882.28345"
+       id="text1091"
+       inkscape:transform-center-x="-211.69518"
+       inkscape:transform-center-y="-46.644505"><tspan
+         id="tspan1089"
+         sodipodi:role="line"
+         x="241.88977"
+         y="882.28345"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;">Back-End</tspan><tspan
+         sodipodi:role="line"
+         x="241.88977"
+         y="893.47253"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         id="tspan1095">Server</tspan></text>
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path966-9"
+       d="m 45.354333,901.1811 v -11.33858 l 3.779528,-3.77953"
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-17.007877"
+       inkscape:transform-center-y="-37.795233" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 90.708665,901.1811 v -11.33858 l 3.779528,-3.77953"
+       id="path1112"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:transform-center-x="-62.362209"
+       inkscape:transform-center-y="-37.795233" />
+    <path
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path1114"
+       d="m 136.06301,901.1811 v -11.33858 l 3.77952,-3.77953"
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-107.71655"
+       inkscape:transform-center-y="-37.795233" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 181.41733,901.1811 v -11.33858 l 3.77952,-3.77953"
+       id="path1116"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:transform-center-x="-153.07087"
+       inkscape:transform-center-y="-37.795233" />
+    <rect
+       rx="4.9262152"
+       ry="4.9262152"
+       y="931.4173"
+       x="211.65356"
+       height="30.236263"
+       width="60.472439"
+       id="rect1122"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.75590551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       inkscape:transform-center-x="-211.65357"
+       inkscape:transform-center-y="15.118151" />
+    <text
+       id="text1128"
+       y="942.75592"
+       x="241.88977"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"
+       inkscape:transform-center-x="-211.73264"
+       inkscape:transform-center-y="13.827968"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="942.75592"
+         x="241.88977"
+         sodipodi:role="line"
+         id="tspan1147">SQL Database</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333333px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.80999988px;"
+         y="953.94501"
+         x="241.88977"
+         sodipodi:role="line"
+         id="tspan1151">Server</tspan></text>
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="m 241.88976,931.41732 1e-5,-30.23622"
+       id="path1116-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:transform-center-x="-211.65354"
+       inkscape:transform-center-y="-15.118068" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.80999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="244.01752"
+       y="912.51965"
+       id="text1044-1-5"
+       inkscape:transform-center-x="-44.09543"
+       inkscape:transform-center-y="-52.116262"><tspan
+         id="tspan1042-5-6"
+         sodipodi:role="line"
+         x="244.01752"
+         y="912.51965"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.80999988px">1 Gb</tspan><tspan
+         sodipodi:role="line"
+         x="244.01752"
+         y="924.18634"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.33333302px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.80999988px"
+         id="tspan1171">Ethernet</tspan></text>
+  </g>
+</svg>
