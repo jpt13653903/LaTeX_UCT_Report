@@ -4,7 +4,7 @@ If you are new to \LaTeX{}, I would suggest reading~\cite{Oetiker_2015}.  If you
 
 The introduction is where you set the scene.  Here you reference other, related work, as well as a summary relating to how you improve upon said work~\cite{BibExample}.  In the sense of the practical reports, the introduction will summarise the experiment the practical is all about.
 
-As a general rule of thumb, keep the introduction to the first column and don't put any \mbox{sub-sections} into it.
+As a general rule of thumb, keep the introduction to the first column oe first page and don't put any \mbox{sub-sections} into it. But do so with care, obviously if you cannot set the scene and introduce the issue in such a limited space it is better to have a clearer rather than too short and unclear introduction.
 
 Remember that, for bibliography citations to work, you have to include running Bib\TeX{} in the compile chain.  My TeXstudio~\cite{TeXstudio} compile chain for ``Build \& View'' is\linebreak
 \vspace{-6mm}
@@ -14,6 +14,19 @@ txs:///bibtex | txs:///pdflatex |
 txs:///view-pdf-internal
 \end{verbatim}
 % \linebreak stretches the line that is broken to the end of the column.  Use "\\" or "\newline" if you don't want it to do this.
+
+General guide to an excellent introduction:
+
+\begin{itemize}
+	\item Put your work in context and set the scene appropriately (most important!). 
+	\item Around 80-90\% of your references are typically cited in the introduction or introduction, background and literature review of your paper (engineering papers often don't have an explicit literature review section).
+	\item The four key pieces of the introduction: 1) The subject/topic; 2) past work done in the area (related to your focus) and what is lacking; 3) The novelty/benefit of your contribution (i.e. preferably emphasising that it contributes new insights and knowledge); 4) The plan ahead for the remainder of the paper \footnote{a caveat to this: some authors and reviewers sometimes don't like the `plan ahead' which is usually just a paragraph, they may think it redundant and wasting space; that may be valid for a short paper but it often improves the readability and provides an effective bridge towards the rest of the paper.}.
+\end{itemize}
+
+
+
+
+
 
 \subsection{Drafting Markup}
 
