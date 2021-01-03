@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="system_design.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="403.76334"
+     inkscape:cy="629.49254"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1592"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="false"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-text-baseline="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Boxes"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       rx="7.7665181"
+       ry="7.7665181"
+       y="105.71555"
+       x="53.156528"
+       height="51.582191"
+       width="108.1795"
+       id="rect833"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect927"
+       width="34.433044"
+       height="39.354889"
+       x="60.524681"
+       y="108.1744"
+       ry="5.1258826"
+       rx="5.1258826" />
+    <rect
+       rx="5.1258826"
+       ry="5.1258826"
+       y="108.1744"
+       x="119.52874"
+       height="39.354889"
+       width="34.433044"
+       id="rect929"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.30000001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+    <rect
+       rx="0.48044735"
+       ry="0.48044735"
+       y="115.56483"
+       x="62.613983"
+       height="4.8751345"
+       width="30.206442"
+       id="rect931"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.8465116;paint-order:normal"
+       id="rect933"
+       width="30.206442"
+       height="4.8751345"
+       x="62.613983"
+       y="135.2117"
+       ry="0.48044735"
+       rx="0.48044735" />
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect935"
+       width="30.747654"
+       height="7.0660968"
+       x="121.39393"
+       y="119.17152"
+       ry="1.2219323"
+       rx="1.2219323" />
+    <rect
+       rx="1.2219323"
+       ry="1.2219323"
+       y="129.4624"
+       x="121.39393"
+       height="7.0660968"
+       width="30.747654"
+       id="rect937"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Text"
+     style="display:inline">
+    <text
+       id="text4659-7"
+       y="119.10703"
+       x="77.717209"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.02084303px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.02084303px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.21431246px"
+         y="119.10703"
+         x="77.717209"
+         id="tspan4657-6"
+         sodipodi:role="line">GUI Input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.02084303px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="77.717209"
+       y="138.77785"
+       id="text1011"><tspan
+         sodipodi:role="line"
+         id="tspan1009"
+         x="77.717209"
+         y="138.77785"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.02084303px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.21431246px">GUI Output</tspan></text>
+    <text
+       id="text1017"
+       y="146.12395"
+       x="77.717209"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940662px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940662px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.21431246px"
+         y="146.12395"
+         x="77.717209"
+         id="tspan1015"
+         sodipodi:role="line">Front-End System</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.20121789px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="122.51173"
+       y="122.08466"
+       id="text1011-9"><tspan
+         sodipodi:role="line"
+         id="tspan1009-7"
+         x="122.51173"
+         y="122.08466"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11455011px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.21431246px">Log survey questions, decide</tspan><tspan
+         sodipodi:role="line"
+         x="122.51173"
+         y="124.86008"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11455011px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.21431246px"
+         id="tspan1037">responses, possible prizes.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.20121813px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="122.50343"
+       y="132.36601"
+       id="text1011-9-8"><tspan
+         sodipodi:role="line"
+         x="122.50343"
+         y="132.36601"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11455011px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.21431246px"
+         id="tspan1037-5">Comms to till: get loyalty card</tspan><tspan
+         sodipodi:role="line"
+         x="122.50343"
+         y="135.14143"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11455011px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:0.21431246px"
+         id="tspan1062">info and decide questions.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940662px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="136.76775"
+       y="146.12395"
+       id="text1066"><tspan
+         sodipodi:role="line"
+         id="tspan1064"
+         x="136.76775"
+         y="146.12395"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940662px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.21431246px">Back-End System</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940686px;line-height:125%;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.21431246px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="107.24628"
+       y="155.26584"
+       id="text1066-9"><tspan
+         sodipodi:role="line"
+         id="tspan1064-2"
+         x="107.24628"
+         y="155.26584"
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:3.19940686px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Semi-Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.21431246px">POS Customer Survey &amp; Reward System</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Arrows"
+     style="display:inline">
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2025;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.40465166;paint-order:normal"
+       d="m 119.52874,117.99241 -2.27671,1.17072 c 0.56362,-0.77021 0.55096,-1.58196 0,-2.34145 z"
+       id="path949"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2025;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.40465166;paint-order:normal"
+       d="m 94.957726,137.65839 2.276708,-1.17073 c -0.563622,0.77022 -0.550962,1.58197 0,2.34145 z"
+       id="path949-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 94.957726,117.99241 H 118.23022"
+       id="path966"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.36279069;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 96.256248,137.65839 H 119.52874"
+       id="path966-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

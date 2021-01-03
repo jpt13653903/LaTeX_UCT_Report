@@ -8,10 +8,10 @@
 
   \def\@studentnumber{\textcolor{red}{Student Number}}
   \newcommand\studentnumber[1]{\def\@studentnumber{#1}}
-  
+
   \def\@supervisor{\textcolor{red}{Supervisor(s)}}
   \newcommand\supervisor[1]{\def\@supervisor{#1}}
-  
+
   \def\@department{\textcolor{red}{Department}}
   \newcommand\department[1]{\def\@department{#1}}
 
@@ -29,9 +29,9 @@
 
   \def\@keywords{\textcolor{red}{Keywords}}
   \newcommand\keywords[1]{\def\@keywords{#1}}
-  
+
   \def\@date{\today}
-  
+
   \renewcommand{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
@@ -47,36 +47,36 @@
         \hrule
         % Modify the line below to insert your subtitle.
         {\Large \@subtitle}
-        
+
         \vfill\vfill\vfill
-        
+
         \includegraphics[height=85mm]{../Figures/UCT_Circular}
-        
+
         \vfill\vfill
-        
+
         Presented by:\\
         \@author % Insert your name here
-        
+
         \vfill\vfill
-        
+
         Prepared for:\\
         \@supervisor\\
         Dept. of \@department\\University of Cape Town
-        
+
         \vfill\vfill
-        
+
         Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
         fulfilment of the academic requirements for a \@degreename\ degree in \@field.
-        
+
         \vfill
 
         \textbf{\@date}
 
         \vfill
-    
+
         \textbf{Key words:}\\
         \@keywords
-        
+
       \else % Not a formal thesis
         \mbox{}\vfill
         \includegraphics[height=55mm]{../Figures/UCT_Circular}\\[10mm]
@@ -100,7 +100,7 @@
             \@studentnumber
           \end{flushright}
         \end{minipage}\\[2 cm]
-      
+
         \vfill\vfill
 
         {\large \@date}\\[2 cm]

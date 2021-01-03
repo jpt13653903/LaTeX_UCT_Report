@@ -37,11 +37,11 @@
   \fancyhead[LO]{\rightmark}
   \fancyhead[RO]{\thepage}
   \setlength{\headheight}{15pt}
-  
+
   \fancyfoot{}
-  
+
   % Make empty pages before chapters truly empty (from fancyhdr manual)
-  
+
   \makeatletter
    \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
     \mbox{}
@@ -60,14 +60,13 @@
     \addcontentsline{lof}{chapter}{\thechapter{}~~#1}%
     \addcontentsline{lot}{chapter}{\thechapter{}~~#1}%
   }
-  \renewcommand\subsubsection{%
-    \@startsection{subsubsection}{3}{\z@}%
-    {-3.25ex\@plus -1ex \@minus -.2ex}%
-    {1.5ex \@plus .2ex}%
-    {%
-      \refstepcounter{subsubsection}%
-      \normalfont\normalsize\bfseries\thesubsubsection~~~% The default is numberless
-    }%
+  \renewcommand\subsubsection[1]{%
+    \par%
+    \vspace{3ex plus 0.5ex minus 0.2ex}%
+    \refstepcounter{subsubsection}%
+    {\normalfont\normalsize\bfseries\thesubsubsection~~~#1}
+    \pdfbookmark[3]{\thesubsubsection~#1}{sssec:\thesubsubsection}\par
+    \vspace{1.5ex plus 0.2ex}%
   }
   \renewcommand\subparagraph{%
     \@startsection{subparagraph}{5}{\parindent}%

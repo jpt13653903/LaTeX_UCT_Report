@@ -28,11 +28,11 @@ Or you could turn it into a float: see listing~\ref{lst:OpenCL_Matrix_Mult}.  Fl
   ){
     const int i = get_global_id(0); // 1st dimension index
     const int j = get_global_id(1); // 2nd dimension index
-   
+
     // Private variables
     int   k;
     float f = 0.0;
-   
+
     // Kernel body
     for(k = 0; k < N; k++) f += A[i*N + k] * B[k*N + j];
     Y[i*N + j] = f;
