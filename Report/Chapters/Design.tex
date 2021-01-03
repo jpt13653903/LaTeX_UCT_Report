@@ -4,7 +4,7 @@
 \Card{\textbf{Note}}{
   The Design is, as the name suggests, about the prototype or system you designed in order to achieve investigation or development goals of your research objective. The Design chapter is something that is typically found in engineering theses, hence our inclusion of that chapter.  The scope and complexity of this chapter (or associated design chapters) depends on the level of the project: obviously a BSc final year project is going to be smaller scale and less complicated than a MSc project.
 
-  Commonly, systems that are built nowadays, and this relates especially to computer engineering or mechatronics types projects (but is relevant to many electrical engineering project too), involve multiple aspects.  Typically: (a) the System Level; (b) the Hardware Level and (c) the Software Level.  In addition, there may be considerations for the environment and/or `test rigs' (\ie~the infrastructure that may need to be set up around the system under test in order to perform the testing, and the test rig may in itself be a complicated system that needs thorough design and/or explanation.) 
+  Commonly, systems that are built nowadays, and this relates especially to computer engineering or mechatronics types projects (but is relevant to many electrical engineering project too), involve multiple aspects.  Typically: (a) the System Level; (b) the Hardware Level and (c) the Software Level.  In addition, there may be considerations for the environment and/or `test rigs' (\ie~the infrastructure that may need to be set up around the system under test in order to perform the testing, and the test rig may in itself be a complicated system that needs thorough design and/or explanation.)
 
   For a PhD, or if your Design chapter starts getting too long, you might decide to rather divide it into separate chapters e.g. according to the subsections provided here.
 }
@@ -48,10 +48,10 @@ You might decide to have some actual code (usually not more than code snippets, 
 Things you may have in the Software section include the following:
 
 \begin{itemize}
-	\item Software designs drawings (\eg~block diagrams, UML diagrams, etc.)
-	\item Algorithms (maybe in pseudocode, or actual code such as MATLAB)
-	\item Code snippets (where relevant, used to illustrate how you went from algorithm, or an element of the software design, to executable implemented code)
-	\item Implementation and development methods (for example specific software tools that had to be installed, scripts to run, parameters to use; but remember that some of this particular item may be better placed in the methodology -- particularly if it relates to choices that were made earlier on or even before development started.)
+  \item Software designs drawings (\eg~block diagrams, UML diagrams, etc.)
+  \item Algorithms (maybe in pseudocode, or actual code such as MATLAB)
+  \item Code snippets (where relevant, used to illustrate how you went from algorithm, or an element of the software design, to executable implemented code)
+  \item Implementation and development methods (for example specific software tools that had to be installed, scripts to run, parameters to use; but remember that some of this particular item may be better placed in the methodology -- particularly if it relates to choices that were made earlier on or even before development started.)
 \end{itemize}
 
 \section{Implementation}
@@ -78,11 +78,11 @@ The above shows a snippet without caption and placed inline (\ie~it does not flo
   ){
     const int i = get_global_id(0); // 1st dimension index
     const int j = get_global_id(1); // 2nd dimension index
-    
+
     // Private variables
     int   k;
     float f = 0.0;
-    
+
     // Kernel body
     for(k = 0; k < N; k++) f += A[i*N + k] * B[k*N + j];
     Y[i*N + j] = f;
@@ -91,7 +91,7 @@ The above shows a snippet without caption and placed inline (\ie~it does not flo
 
 \begin{minipage}[t]{\textwidth} % Prevent page-breaks for this list and associated paragraph
   Only list what is relevant.  Do not give too much detail -- just enough to show what you've done.  This template supports the following languages:
-  
+
   \vspace{-2ex} % make the list part of the previous paragraph
   \begin{itemize}\setlength{\itemsep}{-1ex} % Tighten the list spacing
     \item Matlab (Octave)

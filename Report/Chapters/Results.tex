@@ -19,13 +19,13 @@ Include good quality graphs (see Fig.~\ref{fig:r_vs_N_f=0_0005_P=90} for an exam
     set(gcf, 'PaperOrientation', 'landscape');
     set(gcf, 'PaperSize'       ,       [8, 4]);
     set(gcf, 'PaperPosition'   , [0, 0, 8, 4]);
-   
+
     set(gca, 'FontName', 'Times New Roman');
     set(gca, 'Position', [0.1 0.2 0.85 0.75]);
-   
+
     xlabel(["\n" X]);
     ylabel([Y "\n\n"]);
-   
+
     setenv("GSC", "GSC"); # Eliminates stupid warning
     print(...
       [File '.pdf'],...
