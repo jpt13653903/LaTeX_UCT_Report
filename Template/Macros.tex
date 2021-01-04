@@ -228,4 +228,9 @@
     \Card{\todo{TODO}}{#1}
   \fi
 }
+\newcommand{\question}[1]{
+  \ifDraft
+    \Card{{\color{Rephrase}\bfseries Question}}{#1}
+  \fi
+}
 %-------------------------------------------------------------------------------

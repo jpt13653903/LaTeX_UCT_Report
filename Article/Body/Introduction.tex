@@ -31,11 +31,6 @@ General guide to an excellent introduction:
   \end{enumerate}
 \end{itemize}
 
-
-
-
-
-
 \subsection{Drafting Markup}
 
 When the template is in draft mode, you can use various helper macros, as illustrated below:
@@ -50,5 +45,13 @@ When the template is in draft mode, you can use various helper macros, as illust
   It is a minipage environment, so you can have all sorts of stuff in it.  It can be many paragraphs long, but don't make it too long, because \LaTeX\ will force the whole card onto a single page.
 
   \notecard{This is a nested note card.  You can nest cards of arbitrary types as deep as you like.}
+}
+
+\question{
+  It is often convenient to add a reminder to ask a question -- either rhetorical within the text, or to whoever is proofreading your work.
+}
+
+\notecard{
+  All these cards are drafting mark-up, so will not appear in your final copy.  If you want a card (of any kind) to appear in your final copy, make use of the \texttt{$\backslash$Card} command directly (it is defined in \texttt{Template/Macros}).
 }
 
