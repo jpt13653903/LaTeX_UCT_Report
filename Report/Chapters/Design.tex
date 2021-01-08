@@ -106,6 +106,40 @@ The above shows a snippet without caption and placed inline (\ie~it does not flo
   \end{itemize}
 \end{minipage}
 
+You might also want to put two listings (or a listing and a figure) side-by-side for easier comparison.  It is difficult to generalise this use-case, so you'll have to do it by means of lower-level commands, as shown in listings~\ref{lst:VectorsInMatlab} and~\ref{lst:VectorsInC}, as well as figure~\ref{fig:SinGraph}.  The \verb|\Prepare...Caption| is required in order to place the link anchor in the correct place.
+
+\begin{Float}%
+  \begin{minipage}[b]{0.27\textwidth}\centering
+    \PrepareListingCaption{Matlab}{VectorsInMatlab}
+    \begin{Matlab}
+  N = 128;
+  x = linspace(0, 10*pi, N);
+  y = sin(x);
+    \end{Matlab}
+    \PlaceListingCaption
+  \end{minipage}%
+  \hspace{2mm}%
+  \begin{minipage}[b]{0.40\textwidth}\centering
+    \PrepareListingCaption{C++}{VectorsInC}
+    \begin{Cpp}
+  const int N = 128;
+  std::vector<double> x(N);
+  std::vector<double> y(N);
+  for(int n = 0; n < N; n++){
+    x[n] = 10.0*M_PI * ((double)n/(N-1));
+    y[n] = sin(x[n]);
+  }
+    \end{Cpp}
+    \PlaceListingCaption
+  \end{minipage}
+  \hspace{2mm}%
+  \begin{minipage}[b]{0.29\textwidth}\centering
+    \PrepareFigureCaption{Graphical}{SinGraph}
+      \includegraphics[width=\textwidth]{../Figures/SinGraph}
+    \PlaceFigureCaption
+  \end{minipage}
+\end{Float}%
+
 \section{Integration or Test Rig}
 
 Some research projects require the development of surrounding infrastructure or a suitably conditioned or prepared environment in order to carry out the testing. This may involve developing some sort of test rig into which the prototype is placed or coupled so that testing can be performed on it.  As a simple example, consider a vibration measuring device. If you want to test it in the lab, which has concrete floors but you want to test it for a range of flooring types, it may be necessary to build one or more test rigs that will provide the needed characteristics in order to test the product in a sufficiently authentic situation.

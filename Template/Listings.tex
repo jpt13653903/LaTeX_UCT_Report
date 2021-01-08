@@ -40,24 +40,21 @@
 \fi
 
 \newlength{\CodeWidth}
+\setlength{\CodeWidth}{0.95\columnwidth}
 
-\newcommand{\StartListing}[2]{
-  \setlength{\CodeWidth}{0.95\columnwidth}
-  \ifFloat
-    \figure[!t]
-  \else
-    \figure[!htbp]
-  \fi
+\newcommand{\PrepareListingCaption}[2]{
   \refstepcounter{Listing}
   \addcontentsline{lof}{section}{\makebox[20mm][l]{Listing \theListing{}}~#1}
   \label{lst:#2}
   \def\ListingCaption{#1}
-  \noindent\centering\minipage{\CodeWidth}%
 }
-\newcommand{\EndListing}{
-  \endminipage\\%
+\newcommand{\PlaceListingCaption}{%
   {%
-    \footnotesize%
+    \ifTwoColumn
+      \footnotesize
+    \else
+      \small
+    \fi
     \settowidth{\TempFigureLength}{Listing~\theListing{}.~~\ListingCaption}%
     \ifdim \TempFigureLength > 0.95\columnwidth%
       \parbox{0.95\columnwidth}{Listing~\theListing{}.~~\ListingCaption}%
@@ -65,6 +62,20 @@
       Listing~\theListing{}.~~\ListingCaption%
     \fi%
   }%
+}
+
+\newcommand{\StartListing}[2]{
+  \ifFloat
+    \figure[!t]
+  \else
+    \figure[!htbp]
+  \fi
+  \PrepareListingCaption{#1}{#2}
+  \noindent\centering\minipage{\CodeWidth}%
+}
+\newcommand{\EndListing}{
+  \endminipage\\%
+  \PlaceListingCaption%
   \endfigure%
   \ifFloat\else
     \FloatBarrier

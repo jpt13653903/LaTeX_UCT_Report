@@ -1,33 +1,48 @@
 \newlength{\TempFigureLength}
 %-------------------------------------------------------------------------------
 
-\newenvironment{FigureEnvironment}[1]{
-  \def\FigureCaption{#1}
+\newenvironment{Float}{
   \ifFloat
-    \begin{figure}[!t]%
+    \figure[!t]
   \else
-    \begin{figure}[!htbp]%
+    \figure[!htbp]
   \fi
-  \begin{center}%
-  \refstepcounter{figure}
-  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
+  \centering
 }{
-  \ifTwoColumn
-    \footnotesize
-  \else
-    \small
-  \fi
-  \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{\FigureCaption}}
-  \ifdim \TempFigureLength > 0.95\columnwidth
-    \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{\FigureCaption}}%
-  \else
-    Fig.~\thefigure{}.~~{\FigureCaption}%
-  \fi
-  \end{center}%
-  \end{figure}%
+  \endfigure%
   \ifFloat\else
     \FloatBarrier
   \fi
+}
+
+\newcommand{\PrepareFigureCaption}[2]{
+  \def\FigureCaption{#1}
+  \refstepcounter{figure}
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
+  \label{fig:#2}
+}
+\newcommand{\PlaceFigureCaption}{%
+  {%
+    \ifTwoColumn%
+      \footnotesize%
+    \else%
+      \small%
+    \fi%
+    \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{\FigureCaption}}%
+    \ifdim \TempFigureLength > 0.95\columnwidth%
+      \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{\FigureCaption}}%
+    \else%
+      Fig.~\thefigure{}.~~{\FigureCaption}%
+    \fi%
+  }%
+}
+
+\newenvironment{FigureEnvironment}[2]{
+  \begin{Float}%
+  \PrepareFigureCaption{#1}{#2}
+}{
+  \PlaceFigureCaption%
+  \end{Float}%
 }
 %-------------------------------------------------------------------------------
 
@@ -37,8 +52,7 @@
 \fi
 
 \newcommand{\Figure}[3][scale=\FigureSize]{%
-  \begin{FigureEnvironment}{#2}%
-    \label{fig:#3}%
+  \begin{FigureEnvironment}{#2}{#3}%
     \includegraphics[#1]{../Figures/#3}\\[1em]%
   \end{FigureEnvironment}%
 }
