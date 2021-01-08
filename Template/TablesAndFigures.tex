@@ -15,11 +15,11 @@
   \fi
 }
 
-\newcommand{\PrepareFigureCaption}[2]{
-  \def\FigureCaption{#1}
-  \refstepcounter{figure}
-  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}
-  \label{fig:#2}
+\newcommand{\PrepareFigureCaption}[2]{%
+  \def\FigureCaption{#1}%
+  \refstepcounter{figure}%
+  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}%
+  \label{fig:#2}%
 }
 \newcommand{\PlaceFigureCaption}{%
   {%
