@@ -16,10 +16,6 @@ details link below).
 This template compiles using pdfLaTeX.  For the `make figures` target to also
 work, InkScape has to be installed and available on the system path.
 
-For the T1 font encoding to use vector fonts instead of bitmap fonts,
-you have to have the [cm-super](https://miktex.org/packages/cm-super) 
-package installed.
-
 The Makefile works in Windows, but it assumes that you're running it from
 within a bash-like terminal.  The easiest way to do this is to use
 [Git Bash](https://git-scm.com).  You will also need to install
