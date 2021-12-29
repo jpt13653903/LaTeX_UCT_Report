@@ -17,16 +17,17 @@
 %-------------------------------------------------------------------------------
 
 \else%
-  \usepackage[pdftex                       ,%
-              bookmarks         = true     ,%
-              bookmarksnumbered = true     ,%
-              bookmarksdepth    = 5        ,%
-              setpagesize       = false    ,%
-              colorlinks        = true     ,%
-              linkcolor         = black    ,%
-              urlcolor          = black    ,%
-              citecolor         = black    ,%
-              pdfpagelayout     = OneColumn,%
+  \definecolor{LinkColour}{rgb}{0, 0, 0}%
+  \usepackage[pdftex                        ,%
+              bookmarks         = true      ,%
+              bookmarksnumbered = true      ,%
+              bookmarksdepth    = 5         ,%
+              setpagesize       = false     ,%
+              colorlinks        = true      ,%
+              linkcolor         = LinkColour,%
+              urlcolor          = LinkColour,%
+              citecolor         = LinkColour,%
+              pdfpagelayout     = OneColumn ,%
               pdfstartview      = FitH]{hyperref}
 \fi
 %-------------------------------------------------------------------------------
