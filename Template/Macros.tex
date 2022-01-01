@@ -39,25 +39,41 @@
 }
 %-------------------------------------------------------------------------------
 
+\makeatletter
 \ifArticle\else
   \newenvironment{abstract}{
     \thispagestyle{empty}
     \ifFormal
-      \chapter*{Abstract}
+      \ifDraft
+        \vspace*{-30mm}
+      \else
+        \vspace*{-20mm}
+      \fi
+      \begin{center}
+        {\LARGE \@title}\\[-1.4ex]
+        \noindent\rule{\textwidth}{0.4pt}\\[0.4ex]
+        {\large \@subtitle}\\[1em]
+        {\large \@author}\\[1em]
+        {\large \hfill \@date}
+      \end{center}
+      \vspace{-5mm}
+      {\Large \textbf{Abstract}}\par\vspace{1mm}
+      \ifDraft\small\fi
     \else
       \mbox{}\vfill
       \centering\textbf{\Large Abstract}\par\vspace{7mm}
+      \minipage{0.8\textwidth}
     \fi
-    \minipage{0.8\textwidth}
-    \setlength{\parskip}{1em}
+    \setlength{\parskip}{1ex}
   }{
-    \endminipage
     \ifFormal\else
+      \endminipage
       \vfill\vfill
       \clearpage
     \fi
   }
 \fi
+\makeatother
 %-------------------------------------------------------------------------------
 
 \newenvironment{List}{\setlength{\parindent}{0em}\setlength{\parskip}{0.3em}}{}
