@@ -1,9 +1,14 @@
 \newlength{\TempFigureLength}
+\newif\ifFreeFloat\FreeFloatfalse
 %-------------------------------------------------------------------------------
 
 \newenvironment{Float}{
   \ifFloat
-    \figure[!t]
+    \ifFreeFloat
+      \figure[htbp]
+    \else
+      \figure[!t]
+    \fi
   \else
     \figure[!htbp]
   \fi
@@ -60,7 +65,11 @@
 
 \newenvironment{TableEnvironment}[2]{
   \ifFloat
-    \begin{table}[!t]%
+    \ifFreeFloat
+      \begin{table}[htbp]%
+    \else
+      \begin{table}[!t]%
+    \fi
   \else
     \begin{table}[!htbp]%
   \fi
