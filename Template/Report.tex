@@ -60,6 +60,14 @@
     \addcontentsline{lof}{chapter}{\thechapter{}~~#1}%
     \addcontentsline{lot}{chapter}{\thechapter{}~~#1}%
   }
+  \newcommand\ChapterLoF[1]{%
+    \chapter{#1}%
+    \addcontentsline{lof}{chapter}{\thechapter{}~~#1}%
+  }
+  \newcommand\ChapterLoT[1]{%
+    \chapter{#1}%
+    \addcontentsline{lot}{chapter}{\thechapter{}~~#1}%
+  }
   \renewcommand\subsubsection[1]{%
     \par%
     \vspace{3ex plus 0.5ex minus 0.2ex}%
