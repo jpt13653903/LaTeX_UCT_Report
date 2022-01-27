@@ -213,6 +213,19 @@
 \newcommand{\note}    [1]{\ifDraft{\color{Note}    \slshape  #1}\fi}
 \newcommand{\todo}    [1]{\ifDraft{\color{Todo}    \bfseries #1}\fi}
 \newcommand{\rephrase}[1]{\ifDraft{\color{Rephrase}\slshape  #1}\else{#1}\fi}
+
+\newlength{\ReplaceWidth}
+\newcommand{\replace}[2]{%
+  \ifDraft%
+    \settowidth{\ReplaceWidth}{\mbox{#1}}%
+    \mbox{{\color{Rephrase}{#1}}%
+    \hspace{-\ReplaceWidth}%
+    \rule[0.5ex]{\ReplaceWidth}{0.7pt}}%
+    {\color{Note} #2}%
+  \else%
+    #1%
+  \fi%
+}
 %-------------------------------------------------------------------------------
 
 \newcommand{\Card}[2]{{
