@@ -23,7 +23,12 @@
 \newcommand{\PrepareFigureCaption}[2]{%
   \def\FigureCaption{#1}%
   \refstepcounter{figure}%
-  \addcontentsline{lof}{section}{\makebox[20mm][l]{Fig.~\thefigure{}}~\FigureCaption}%
+  \settowidth{\TempLength}{#1}
+  \ifdim \TempLength > 120mm
+    \addtocontents{lof}{\string\hspace{12.7mm}\hyperref[fig:#2]{\makebox[17mm][l]{Fig.~\thefigure:} \string\parbox[t]{110mm}{#1}\string\dotfill\thepage}\string\par}%
+  \else
+    \addtocontents{lof}{\string\hspace{12.7mm}\hyperref[fig:#2]{\makebox[17mm][l]{Fig.~\thefigure:} #1\string\dotfill\thepage}\string\par}%
+  \fi
   \label{fig:#2}%
 }
 \newcommand{\PlaceFigureCaption}{%

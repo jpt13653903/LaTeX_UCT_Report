@@ -1,5 +1,6 @@
 \makeatletter
   \def\@title {\textcolor{red}{Title}}
+  \renewcommand\title[1]{\def\@title{#1}}
 
   \def\@subtitle{\textcolor{red}{Subtitle}}
   \newcommand\subtitle[1]{\def\@subtitle{#1}}
@@ -42,7 +43,7 @@
       \fi
       \ifFormal
         % Modify the line below to insert your title.
-        {\Huge \@title}
+        {\Huge \@title\par}
         \vskip 3mm
         \hrule
         % Modify the line below to insert your subtitle.
@@ -50,7 +51,7 @@
 
         \vfill\vfill\vfill
 
-        \includegraphics[height=85mm]{../Figures/UCT_Circular}
+        \includegraphics[height=75mm]{../Figures/UCT_Circular}
 
         \vfill\vfill
 
