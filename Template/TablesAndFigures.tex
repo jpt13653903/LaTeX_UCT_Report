@@ -40,7 +40,7 @@
     \fi%
     \settowidth{\TempFigureLength}{Fig.~\thefigure{}.~~{\FigureCaption}}%
     \ifdim \TempFigureLength > 0.95\columnwidth%
-      \parbox{0.95\columnwidth}{Fig.~\thefigure{}.~~{\FigureCaption}}%
+      Fig.~\thefigure{}.~~\parbox[t]{0.85\columnwidth}{\FigureCaption}%
     \else%
       Fig.~\thefigure{}.~~{\FigureCaption}%
     \fi%
